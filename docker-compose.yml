@@ -1,0 +1,105 @@
+version: "3.8"
+
+services:
+  traefik:
+    image: traefik:v3.1
+    command:
+      - "--api.dashboard=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
+      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+      - "--certificatesresolvers.letsencrypt.acme.tlschallenge=true"
+      - "--certificatesresolvers.letsencrypt.acme.email=ssvnauka@gmail.com"
+      - "--certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json"
+      - "--log.level=INFO"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - letsencrypt:/letsencrypt
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.rule=Host(\`traefik.maria-site.duckdns.org\`)"
+      - "traefik.http.routers.traefik.service=api@internal"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
+    restart: unless-stopped
+    networks:
+      - maria
+
+  website:
+    image: nginx:alpine
+    volumes:
+      - ./public:/usr/share/nginx/html:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.maria.rule=Host(\`maria-site.duckdns.org\`)"
+      - "traefik.http.routers.maria.entrypoints=websecure"
+      - "traefik.http.routers.maria.tls.certresolver=letsencrypt"
+    restart: unless-stopped
+    networks:
+      - maria
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: maria
+      POSTGRES_PASSWORD: maria_password
+      POSTGRES_DB: maria_db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - maria
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    networks:
+      - maria
+
+  prometheus:
+    image: prom/prometheus:v3.0.0
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.path=/prometheus"
+    restart: unless-stopped
+    networks:
+      - maria
+
+  grafana:
+    image: grafana/grafana:11.3.0
+    volumes:
+      - grafana-data:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.grafana.rule=Host(\`grafana.maria-site.duckdns.org\`)"
+      - "traefik.http.routers.grafana.entrypoints=websecure"
+      - "traefik.http.routers.grafana.tls.certresolver=letsencrypt"
+    restart: unless-stopped
+    networks:
+      - maria
+
+volumes:
+  letsencrypt:
+  postgres-data:
+  redis-data:
+  prometheus-data:
+  grafana-data:
+
+networks:
+  maria:
+    driver: bridge

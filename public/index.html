@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медицинский Центр MARIA — Харьков</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Segoe UI", Arial, sans-serif; line-height: 1.6; color: #333; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; text-align: center; }
+        .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .header p { font-size: 1.2rem; opacity: 0.9; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
+        .service-card { background: #f8f9fa; padding: 2rem; border-radius: 8px; border-left: 4px solid #667eea; }
+        .service-card h3 { color: #667eea; margin-bottom: 1rem; }
+        .doctors { background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0; }
+        .doctor { display: flex; align-items: center; gap: 1rem; padding: 1rem; border-bottom: 1px solid #dee2e6; }
+        .doctor-info h4 { color: #667eea; }
+        .contact { background: #667eea; color: white; padding: 2rem; text-align: center; border-radius: 8px; margin: 2rem 0; }
+        .contact a { color: white; text-decoration: none; font-size: 1.2rem; }
+        .footer { text-align: center; padding: 2rem; background: #333; color: white; }
+        .btn { display: inline-block; padding: 1rem 2rem; background: #667eea; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem; transition: transform 0.2s; }
+        .btn:hover { transform: translateY(-2px); background: #764ba2; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>🏥 Медицинский Центр MARIA</h1>
+        <p>Хирургия, онкология, профессорская консультация</p>
+        <p>г. Харьков, ул. Сирохинская, 7-Б</p>
+    </header>
+
+    <div class="container">
+        <section style="text-align: center; margin: 3rem 0;">
+            <a href="#services" class="btn">Услуги</a>
+            <a href="#doctors" class="btn">Врачи</a>
+            <a href="#contact" class="btn">Запись онлайн</a>
+        </section>
+
+        <section id="services" class="services">
+            <div class="service-card">
+                <h3>🩺 Хирургия</h3>
+                <p>Хирургические операции любой сложности. Лапароскопия, малоинвазивная хирургия.</p>
+            </div>
+            <div class="service-card">
+                <h3>🎯 Онкология</h3>
+                <p>Диагностика и лечение онкологических заболеваний. Химиотерапия, иммунотерапия.</p>
+            </div>
+            <div class="service-card">
+                <h3>📋 Консультация</h3>
+                <p>Консультация профессора, доктора медицинских наук. Высшая категория.</p>
+            </div>
+            <div class="service-card">
+                <h3>🔬 Диагностика</h3>
+                <p>УЗИ, КТ, МРТ, лабораторная диагностика. Современное оборудование.</p>
+            </div>
+            <div class="service-card">
+                <h3>💉 Реабилитация</h3>
+                <p>Послеоперационная реабилитация. Физиотерапия, массаж, ЛФК.</p>
+            </div>
+            <div class="service-card">
+                <h3>👨‍⚕️ Профосмотр</h3>
+                <p>Профессиональные медицинские осмотры. Медицинские книжки, справки.</p>
+            </div>
+        </section>
+
+        <section id="doctors" class="doctors">
+            <h2 style="text-align: center; color: #667eea; margin-bottom: 2rem;">Ведущие специалисты</h2>
+            <div class="doctor">
+                <div class="doctor-info">
+                    <h4>Сушков С. В.</h4>
+                    <p>Хирург, онколог. Профессор, доктор медицинских наук. Стаж 40 лет.</p>
+                </div>
+            </div>
+            <div class="doctor">
+                <div class="doctor-info">
+                    <h4>Команда профессионалов</h4>
+                    <p>Опытные врачи высшей категории. Многопрофильная клиника.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>📞 Запись на приём</h2>
+            <p style="margin: 1rem 0;">Телефон: <a href="tel:+380000000000">+380 (00) 000-00-00</a></p>
+            <p>Адрес: г. Харьков, ул. Сирохинская, 7-Б</p>
+            <p style="margin-top: 1rem;">
+                <a href="#" class="btn" style="background: white; color: #667eea;">Онлайн-запись</a>
+            </p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 Медицинский Центр MARIA. Все права защищены.</p>
+        <p>ssvnauka@gmail.com | ssvnauka.net</p>
+    </footer>
+</body>
+</html>
