@@ -17,6 +17,21 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="author" content="Проф. Сушков С.В., д.м.н.">
     <meta name="datePublished" content="2026-01-15">
+
+    <!-- TODO: AdSense verification — вставьте meta-тег из личного кабинета AdSense после регистрации
+         <meta name="google-adsense-platform-account" content="..." />
+    -->
+
+    <!-- TODO: Google Analytics 4 — замените G-XXXXXXXXXX на ваш Measurement ID
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -102,7 +117,11 @@
             .adsense-sidebar { display: flex; margin-bottom: 1rem; }
         }
     </style>
+
+    <!-- TODO: AdSense — замените ca-pub-XXXXXXXXXXXXXXXX на ваш Publisher ID из AdSense
+               После получения ID раскомментируйте строку ниже:
     <script data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    -->
 </head>
 <body>
     <header class="header">
@@ -165,7 +184,7 @@
                 </ul>
 
                 <div class="affiliate">
-                    🔬 <a href="https://www.synevo.ua/ua/analyses-list/hpv-test" target="_blank" rel="noopener sponsored">Сдать ПЦР на ВПЧ 16/18 типа в Синэво — от 650 грн</a> (рекомендуется раз в 1–2 года)
+                    🔬 <a href="https://www.synevo.ua/ua/analyses-list/hpv-test" target="_blank" rel="noopener">Сдать ПЦР на ВПЧ 16/18 типа в Синэво</a> (от 650 грн, рекомендуется раз в 1–2 года)
                 </div>
 
                 <div class="adsense">AdSense — In-Article Ad Unit</div>
@@ -193,7 +212,7 @@
                 <p>Выполняется при подозрении на CIN II–III или рак. Гистологическое исследование — единственный метод, дающий окончательный диагноз.</p>
 
                 <div class="affiliate">
-                    📋 <a href="https://www.diakohd.com/analizy.html" target="_blank" rel="noopener sponsored">Полный гинекологический скрининг в Диако (Харьков) — комплекс от 1200 грн</a>
+                    📋 <a href="https://www.diakohd.com/analizy.html" target="_blank" rel="noopener">Полный гинекологический скрининг в Диако (Харьков)</a> — комплекс от 1200 грн
                 </div>
 
                 <h2 id="where">4. Где сдать анализы в Харькове: цены и адреса</h2>
@@ -243,6 +262,10 @@
                     <h3>🎁 Бесплатный гайд от профессора</h3>
                     <p><strong>«10 симптомов гинекологии, которые нельзя игнорировать»</strong> — PDF-гайд, написанный хирургом-онкологом с 40-летним стажем.</p>
                     <p style="font-size: 0.9rem; margin-top: 0.5rem;">✅ Чек-лист для самопроверки<br>✅ Когда идти к врачу срочно<br>✅ Как подготовиться к приёму</p>
+
+                    <!-- TODO: Formspree — замените YOUR_FORM_ID на реальный ID из formspree.io
+                         Получить ID: https://formspree.io/register → создать форму → скопировать ID из URL
+                    -->
                     <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="return handleLeadMagnet(this);">
                         <input type="email" name="email" placeholder="Ваш email" required>
                         <input type="hidden" name="subject" value="Lead Magnet: 10 симптомов гинекологии">
@@ -258,7 +281,7 @@
                 <p>Вакцины Gardasil 9 и Cervarix защищают от наиболее онкогенных типов ВПЧ. В Украине вакцинация доступна для девочек и женщин 9–45 лет (в зависимости от препарата). Вакцинация не лечит существующую инфекцию, но предотвращает новые.</p>
 
                 <div class="affiliate">
-                    💉 <a href="https://hepatitis.org.ua/vaktsinatsiya-vpkh/" target="_blank" rel="noopener sponsored">Узнать о вакцинации от ВПЧ в Харькове — клиники и цены</a>
+                    💉 <a href="https://hepatitis.org.ua/vaktsinatsiya-vpkh/" target="_blank" rel="noopener">Узнать о вакцинации от ВПЧ в Харькове — клиники и цены</a>
                 </div>
 
                 <h3>6.2. Регулярный скрининг</h3>
@@ -338,10 +361,13 @@
     </footer>
 
     <script>
+        // TODO: gtag — после добавления GA4 скрипта в <head>, эта функция будет работать автоматически
         function handleLeadMagnet(form) {
             const email = form.email.value;
             if (email) {
-                gtag && gtag('event', 'lead_magnet_download', { 'event_category': 'conversion', 'event_label': 'gynecology_guide' });
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'lead_magnet_download', { 'event_category': 'conversion', 'event_label': 'gynecology_guide' });
+                }
                 document.getElementById('leadModal').classList.add('active');
             }
             return true;
