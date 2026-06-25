@@ -4,28 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Медицинский Центр MARIA — Харьков</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#667eea">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Медицинский Центр MARIA — Хирургия, Онкология, Гинекология в Харькове">
+    <meta property="og:description" content="Миниинвазивная гинекология, абдоминальная хирургия, онкохирургия. Профессор, 40 лет стажа.">
+    <meta name="twitter:card" content="summary_large_image">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: "Segoe UI", Arial, sans-serif; line-height: 1.6; color: #333; }
-        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; text-align: center; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; text-align: center; position: relative; }
         .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        .header p { font-size: 1.2rem; opacity: 0.9; }
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
         .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
         .service-card { background: #f8f9fa; padding: 2rem; border-radius: 8px; border-left: 4px solid #667eea; }
         .service-card h3 { color: #667eea; margin-bottom: 1rem; }
-        .doctors { background: #f8f9fa; padding: 2rem; border-radius: 8px; margin: 2rem 0; }
-        .doctor { display: flex; align-items: center; gap: 1rem; padding: 1rem; border-bottom: 1px solid #dee2e6; }
-        .doctor-info h4 { color: #667eea; }
-        .contact { background: #667eea; color: white; padding: 2rem; text-align: center; border-radius: 8px; margin: 2rem 0; }
-        .contact a { color: white; text-decoration: none; font-size: 1.2rem; }
-        .footer { text-align: center; padding: 2rem; background: #333; color: white; }
-        .btn { display: inline-block; padding: 1rem 2rem; background: #667eea; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem; transition: transform 0.2s; }
+        .btn { display: inline-block; padding: 1rem 2rem; background: #667eea; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem; transition: transform 0.2s; cursor: pointer; border: none; }
         .btn:hover { transform: translateY(-2px); background: #764ba2; }
+        .form-group { margin-bottom: 1rem; text-align: left; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
+        .lang-switch { position: absolute; top: 1rem; right: 1rem; }
+        .lang-switch a { color: white; text-decoration: none; margin: 0 0.5rem; opacity: 0.7; }
+        .lang-switch a.active { opacity: 1; font-weight: bold; }
+        .footer { text-align: center; padding: 2rem; background: #333; color: white; }
+        @media (max-width: 768px) { .header h1 { font-size: 1.8rem; } }
     </style>
 </head>
 <body>
     <header class="header">
+        <div class="lang-switch">
+            <a href="?lang=ru" class="active">RU</a>
+            <a href="?lang=uk">UA</a>
+            <a href="?lang=en">EN</a>
+        </div>
         <h1>🏥 Медицинский Центр MARIA</h1>
         <p>Хирургия, онкология, профессорская консультация</p>
         <p>г. Харьков, ул. Сирохинская, 7-Б</p>
@@ -34,66 +47,68 @@
     <div class="container">
         <section style="text-align: center; margin: 3rem 0;">
             <a href="#services" class="btn">Услуги</a>
-            <a href="#doctors" class="btn">Врачи</a>
-            <a href="#contact" class="btn">Запись онлайн</a>
+            <a href="#appointment" class="btn">Запись онлайн</a>
+            <a href="#contact" class="btn">Контакты</a>
         </section>
 
         <section id="services" class="services">
-            <div class="service-card">
-                <h3>🩺 Хирургия</h3>
-                <p>Хирургические операции любой сложности. Лапароскопия, малоинвазивная хирургия.</p>
-            </div>
-            <div class="service-card">
-                <h3>🎯 Онкология</h3>
-                <p>Диагностика и лечение онкологических заболеваний. Химиотерапия, иммунотерапия.</p>
-            </div>
-            <div class="service-card">
-                <h3>📋 Консультация</h3>
-                <p>Консультация профессора, доктора медицинских наук. Высшая категория.</p>
-            </div>
-            <div class="service-card">
-                <h3>🔬 Диагностика</h3>
-                <p>УЗИ, КТ, МРТ, лабораторная диагностика. Современное оборудование.</p>
-            </div>
-            <div class="service-card">
-                <h3>💉 Реабилитация</h3>
-                <p>Послеоперационная реабилитация. Физиотерапия, массаж, ЛФК.</p>
-            </div>
-            <div class="service-card">
-                <h3>👨‍⚕️ Профосмотр</h3>
-                <p>Профессиональные медицинские осмотры. Медицинские книжки, справки.</p>
-            </div>
+            <div class="service-card"><h3>🩺 Хирургия</h3><p>Лапароскопия, малоинвазивная хирургия.</p></div>
+            <div class="service-card"><h3>🎯 Онкология</h3><p>Диагностика и лечение онкологических заболеваний.</p></div>
+            <div class="service-card"><h3>📋 Консультация</h3><p>Профессор, доктор медицинских наук. Стаж 40 лет.</p></div>
+            <div class="service-card"><h3>🔬 Диагностика</h3><p>УЗИ, КТ, МРТ, лабораторная диагностика.</p></div>
+            <div class="service-card"><h3>💉 Реабилитация</h3><p>Послеоперационная реабилитация, ЛФК.</p></div>
+            <div class="service-card"><h3>👨‍⚕️ Профосмотр</h3><p>Медицинские осмотры, справки.</p></div>
         </section>
 
-        <section id="doctors" class="doctors">
-            <h2 style="text-align: center; color: #667eea; margin-bottom: 2rem;">Ведущие специалисты</h2>
-            <div class="doctor">
-                <div class="doctor-info">
-                    <h4>Сушков С. В.</h4>
-                    <p>Хирург, онколог. Профессор, доктор медицинских наук. Стаж 40 лет.</p>
+        <section id="appointment" style="max-width: 600px; margin: 2rem auto; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
+            <h2 style="color: #667eea; text-align: center; margin-bottom: 1.5rem;">📅 Записаться на приём</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label>Ваше имя *</label>
+                    <input type="text" name="name" required placeholder="Иван Иванов">
                 </div>
-            </div>
-            <div class="doctor">
-                <div class="doctor-info">
-                    <h4>Команда профессионалов</h4>
-                    <p>Опытные врачи высшей категории. Многопрофильная клиника.</p>
+                <div class="form-group">
+                    <label>Телефон *</label>
+                    <input type="tel" name="phone" required placeholder="+380 XX XXX XX XX">
                 </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>📞 Запись на приём</h2>
-            <p style="margin: 1rem 0;">Телефон: <a href="tel:+380000000000">+380 (00) 000-00-00</a></p>
-            <p>Адрес: г. Харьков, ул. Сирохинская, 7-Б</p>
-            <p style="margin-top: 1rem;">
-                <a href="#" class="btn" style="background: white; color: #667eea;">Онлайн-запись</a>
-            </p>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                    <label>Направление *</label>
+                    <select name="service" required>
+                        <option value="">Выберите направление</option>
+                        <option value="gynecology">Гинекология</option>
+                        <option value="surgery">Хирургия</option>
+                        <option value="oncology">Онкология</option>
+                        <option value="consultation">Консультация</option>
+                        <option value="ultrasound">УЗИ диагностика</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Дата</label>
+                    <input type="date" name="preferred_date">
+                </div>
+                <div class="form-group">
+                    <label>Комментарий</label>
+                    <textarea name="message" rows="3" placeholder="Опишите симптомы..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">📞 Отправить заявку</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">Или: <a href="https://t.me/SSVPROFF_MEDICAL_BOT" class="btn" style="background: #0088cc;">Telegram бот</a></p>
         </section>
     </div>
 
     <footer class="footer">
-        <p>© 2026 Медицинский Центр MARIA. Все права защищены.</p>
-        <p>ssvnauka@gmail.com | ssvnauka.net</p>
+        <p>© 2026 Медицинский Центр MARIA</p>
+        <p>ssvnauka@gmail.com | +380 96 501 52 28</p>
     </footer>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/sw.js").then(() => console.log("SW registered"));
+        }
+    </script>
 </body>
 </html>
