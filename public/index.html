@@ -12,7 +12,6 @@
     <meta property="og:description" content="Миниинвазивная гинекология, абдоминальная хирургия, онкохирургия. Профессор, 40 лет стажа.">
     <meta name="twitter:card" content="summary_large_image">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1428611006597338" crossorigin="anonymous"></script>
-    <!-- Google Analytics 4 — замените G-XXXXXXXXXX на ваш Measurement ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -20,7 +19,6 @@
         gtag('js', new Date());
         gtag('config', 'G-PLACEHOLDER');
     </script>
-    <!-- End Google Analytics 4 -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: "Segoe UI", Arial, sans-serif; line-height: 1.6; color: #333; }
@@ -28,7 +26,8 @@
         .header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
         .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
         .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
-        .service-card { background: #f8f9fa; padding: 2rem; border-radius: 8px; border-left: 4px solid #667eea; }
+        .service-card { background: #f8f9fa; padding: 2rem; border-radius: 8px; border-left: 4px solid #667eea; text-decoration: none; color: inherit; display: block; transition: transform 0.2s; }
+        .service-card:hover { transform: translateY(-4px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .service-card h3 { color: #667eea; margin-bottom: 1rem; }
         .btn { display: inline-block; padding: 1rem 2rem; background: #667eea; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem; transition: transform 0.2s; cursor: pointer; border: none; }
         .btn:hover { transform: translateY(-2px); background: #764ba2; }
@@ -47,6 +46,9 @@
         .payment-section { max-width: 600px; margin: 2rem auto; padding: 2rem; background: #e8f5e9; border-radius: 8px; border-left: 4px solid #28a745; text-align: center; }
         .payment-section h2 { color: #28a745; margin-bottom: 1rem; }
         .payment-section p { margin-bottom: 1rem; }
+        .landing-links { text-align: center; margin: 2rem 0; }
+        .landing-links h3 { color: #667eea; margin-bottom: 1rem; }
+        .landing-links .btn { margin: 0.5rem; }
         @media (max-width: 768px) { .header h1 { font-size: 1.8rem; } }
     </style>
 </head>
@@ -75,19 +77,45 @@
         </div>
 
         <section id="services" class="services">
-            <div class="service-card"><h3>🩺 Хирургия</h3><p>Лапароскопия, малоинвазивная хирургия.</p></div>
-            <div class="service-card"><h3>🎯 Онкология</h3><p>Диагностика и лечение онкологических заболеваний.</p></div>
-            <div class="service-card"><h3>📋 Консультация</h3><p>Профессор, доктор медицинских наук. Стаж 40 лет.</p></div>
-            <div class="service-card"><h3>🔬 Диагностика</h3><p>УЗИ, КТ, МРТ, лабораторная диагностика.</p></div>
-            <div class="service-card"><h3>💉 Реабилитация</h3><p>Послеоперационная реабилитация, ЛФК.</p></div>
-            <div class="service-card"><h3>👨‍⚕️ Профосмотр</h3><p>Медицинские осмотры, справки.</p></div>
+            <a href="/articles/laparoscopic-cholecystectomy-kharkov.html" class="service-card">
+                <h3>🩺 Хирургия</h3>
+                <p>Лапароскопия, малоинвазивная хирургия. Удаление желчного пузыря, аппендицит.</p>
+            </a>
+            <a href="/articles/oncologic-surgery-kharkov.html" class="service-card">
+                <h3>🎯 Онкохирургия</h3>
+                <p>Лечение рака желудка, кишечника, молочной железы, женских органов.</p>
+            </a>
+            <a href="/articles/gynecology-consultation-kharkov.html" class="service-card">
+                <h3>📋 Гинекология</h3>
+                <p>Профессорская консультация, планирование беременности, лечение.</p>
+            </a>
+            <a href="/articles/myomectomy-kharkov.html" class="service-card">
+                <h3>🌸 Миомэктомия</h3>
+                <p>Удаление миомы матки с сохранением органа. Планирование беременности.</p>
+            </a>
+            <a href="/articles/oncology-screening-kharkov.html" class="service-card">
+                <h3>🔬 Онко-диагностика</h3>
+                <p>Скрининг, раннее выявление рака. УЗИ, маммография, кольпоскопия.</p>
+            </a>
+            <a href="/articles/oncology-screening-kharkov.html" class="service-card">
+                <h3>👨‍⚕️ Профосмотр</h3>
+                <p>Медицинские осмотры, справки, комплексное обследование.</p>
+            </a>
         </section>
+
+        <div class="landing-links">
+            <h3>📍 Подробнее о направлениях</h3>
+            <a href="/articles/laparoscopic-cholecystectomy-kharkov.html" class="btn">Лапароскопия</a>
+            <a href="/articles/myomectomy-kharkov.html" class="btn">Миомэктомия</a>
+            <a href="/articles/oncology-screening-kharkov.html" class="btn">Скрининг</a>
+            <a href="/articles/gynecology-consultation-kharkov.html" class="btn">Гинекология</a>
+            <a href="/articles/oncologic-surgery-kharkov.html" class="btn">Онкохирургия</a>
+        </div>
 
         <section id="payment" class="payment-section">
             <h2>💳 Онлайн-оплата консультации</h2>
             <p>Консультация профессора — <strong>500 грн</strong></p>
             <p>После оплаты мы свяжемся с вами в течение 1 часа для согласования времени.</p>
-            <!-- WayforPay — замените data-merchant-domain на ваш merchant ID -->
             <a href="https://secure.wayforpay.com/pay?merchantAccount=YOUR_MERCHANT_ID&orderReference=MARIA-CONSULT-001&amount=500&currency=UAH&productName=Консультация%20профессора&clientEmail=ssvnauka@gmail.com" 
                class="btn btn-pay" target="_blank" rel="noopener" 
                onclick="gtag('event', 'purchase', { value: 500, currency: 'UAH' });">
