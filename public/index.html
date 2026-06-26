@@ -12,6 +12,15 @@
     <meta property="og:description" content="Миниинвазивная гинекология, абдоминальная хирургия, онкохирургия. Профессор, 40 лет стажа.">
     <meta name="twitter:card" content="summary_large_image">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1428611006597338" crossorigin="anonymous"></script>
+    <!-- Google Analytics 4 — замените G-XXXXXXXXXX на ваш Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PLACEHOLDER');
+    </script>
+    <!-- End Google Analytics 4 -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: "Segoe UI", Arial, sans-serif; line-height: 1.6; color: #333; }
@@ -23,6 +32,8 @@
         .service-card h3 { color: #667eea; margin-bottom: 1rem; }
         .btn { display: inline-block; padding: 1rem 2rem; background: #667eea; color: white; text-decoration: none; border-radius: 4px; margin: 0.5rem; transition: transform 0.2s; cursor: pointer; border: none; }
         .btn:hover { transform: translateY(-2px); background: #764ba2; }
+        .btn-pay { background: #28a745; }
+        .btn-pay:hover { background: #218838; }
         .form-group { margin-bottom: 1rem; text-align: left; }
         .form-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
         .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; }
@@ -33,6 +44,9 @@
         .articles-link { display: block; margin: 1rem 0; text-align: center; }
         .articles-link a { color: #667eea; text-decoration: none; font-weight: bold; }
         .articles-link a:hover { text-decoration: underline; }
+        .payment-section { max-width: 600px; margin: 2rem auto; padding: 2rem; background: #e8f5e9; border-radius: 8px; border-left: 4px solid #28a745; text-align: center; }
+        .payment-section h2 { color: #28a745; margin-bottom: 1rem; }
+        .payment-section p { margin-bottom: 1rem; }
         @media (max-width: 768px) { .header h1 { font-size: 1.8rem; } }
     </style>
 </head>
@@ -69,9 +83,25 @@
             <div class="service-card"><h3>👨‍⚕️ Профосмотр</h3><p>Медицинские осмотры, справки.</p></div>
         </section>
 
+        <section id="payment" class="payment-section">
+            <h2>💳 Онлайн-оплата консультации</h2>
+            <p>Консультация профессора — <strong>500 грн</strong></p>
+            <p>После оплаты мы свяжемся с вами в течение 1 часа для согласования времени.</p>
+            <!-- WayforPay — замените data-merchant-domain на ваш merchant ID -->
+            <a href="https://secure.wayforpay.com/pay?merchantAccount=YOUR_MERCHANT_ID&orderReference=MARIA-CONSULT-001&amount=500&currency=UAH&productName=Консультация%20профессора&clientEmail=ssvnauka@gmail.com" 
+               class="btn btn-pay" target="_blank" rel="noopener" 
+               onclick="gtag('event', 'purchase', { value: 500, currency: 'UAH' });">
+                💳 Оплатить 500 грн (WayforPay)
+            </a>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 1rem;">
+                Также доступно: <a href="https://t.me/SSVPROFF_MEDICAL_BOT">Telegram бот</a> | 
+                <a href="tel:+380965015228">+380 96 501 52 28</a>
+            </p>
+        </section>
+
         <section id="appointment" style="max-width: 600px; margin: 2rem auto; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
             <h2 style="color: #667eea; text-align: center; margin-bottom: 1.5rem;">📅 Записаться на приём</h2>
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="gtag('event', 'form_submit', { event_category: 'appointment', event_label: 'form_spree' });">
                 <div class="form-group">
                     <label>Ваше имя *</label>
                     <input type="text" name="name" required placeholder="Иван Иванов">
@@ -109,7 +139,7 @@
         </section>
     </div>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <p>© 2026 Медицинский Центр MARIA</p>
         <p>ssvnauka@gmail.com | +380 96 501 52 28</p>
     </footer>
