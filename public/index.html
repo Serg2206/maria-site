@@ -1,1 +1,646 @@
-PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9InJ1Ij4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgICA8dGl0bGU+0JzQtdC40YHRh9C40L0g0JzQsNC70LjQvdC+0LLQsCDQnNCQ0KDQkdCjIC0g0KXQuNGH0LrQvtC8LCDQntC10L3QtdC1LCDQp9C40YLQsNC9INC60LDQvNC10L0gfCDQpdC60YDQsNC60L7QstGL0Lk8L3RpdGxlPgogICAgPG1ldGEgbmFtZT0iZGVzY3JpcHRpb24iIGNvbnRlbnQ9ItCc0LXQuNGB0YfQuNC9INCc0LDQu9C40L3QvtCy0LAg0JDQkNCQ0J0g0YLRgNC+0LHRgNGP0L3QutCwLNC+0YLQvtC90YPRiNC10L3QvdGL0LkuINCY0LfQvtGA0LjQu9C10LksINC60LDQvdC10L3QvdC+0LPQvNC10LIsINC50LTRg9C8LCDQvdC40YHRgtC+0YDRgtC+0Y/Qv9C40YfQtdC90YLRiywg0L3QtdC30LDQvNC10YLQtdC90YHRiyDQlNCf0KjQmtCQ0J0uINCf0L7QtNCw0YDQvtC60Lgg0L7RgiDQvdC1LiINCiAgICA8bWV0YSBuYW1lPSJrZXl3b3JkcyIgY29udGVudD0i0LzQtdC40YHRh9C40L3QtdC60LAg0YXQtdC90YHRgtC+0Lkg0YXRgNC+0LTQvdC+LCDQv9C10YDQtdGB0YLRgNC+0LTQvdC+0Lkg0YXRgNC+0LTQvdC+0Lkg0YXRgNC+0LTQvdC+0LksINC+0YLQvtC90YPRiNC10L3QvdGL0Lkg0YXRgNC+0LTQvdC+0LksINC60L7QvdC00L7QvNC+0LUg0Y3QvdC40Lgg0YHRgNGP0L3QutCwLCDQutC+0L3QtNC+0LzQvtC1INC+0YLQvtC90YPRiNC10L3QvdC40LksINC60L7QvdC00L7QvNC+0LUsINC60L7QvdC40L3QvdC+0L/QtdC70YzQvdC+0Y8g0L7RgtC+0L3Rg9GI0LXQvdC90LjRjyINCiAgICA8bWV0YSBuYW1lPSJyb2JvdHMiIGNvbnRlbnQ9ImluZGV4LCBmb2xsb3ciPgogICAgPG1ldGEgbmFtZT0iYXV0aG9yIiBjb250ZW50PSLQn9GA0L7QvdC40L3QvtCy0LAg0KHQtdGB0YLQvtC20L3QviDQodCy0LDRgC4iPgogICAgPG1ldGEgcHJvcGVydHk9Im9nOnR5cGUiIGNvbnRlbnQ9IndlYnNpdGUiPgogICAgPG1ldGEgcHJvcGVydHk9Im9nOnRpdGxlIiBjb250ZW50PSLQnNC10L7QsdGA0YPQvdC60LAg0JzQsNC70LjQvdC+0LLQsCDQnNCQ0KDQkdCjIC0g0KXQuNGH0LrQvtC8LCDQntC10L3QtdC1LCDQp9C40YLQsNC9INC60LDQvNC10L0gfCDQpdC60YDQsNC60L7QstGL0LkiPgogICAgPG1ldGEgcHJvcGVydHk9Im9nOmRlc2NyaXB0aW9uIiBjb250ZW50PSJNdWx0aWxhbmd1YWdlIG1lZGljYWwgY2VudGVyIHdlYnNpdGUuIj4KICAgIDxtZXRhIHByb3BlcnR5PSJvZzp1cmwiIGNvbnRlbnQ9Imh0dHBzOi8vc3N2bmF1a2EuY29tLyI+CiAgICA8bGluayByZWw9ImNhbm9uaWNhbCIgaHJlZj0iaHR0cHM6Ly9zc3ZucWFrYS5jb20vIj4KICAgIDxsaW5rIHJlbD0ibWFuaWZlc3QiIGhyZWY9Ii9tYW5pZmVzdC5qc29uIj4KICAgIDxtZXRhIG5hbWU9InRoZW1lLWNvbG9yIiBjb250ZW50PSIjNkI1Qjk1Ij4KICAgIDxsaW5rIHJlbD0iYXBwbGUtdG91Y2gtaWNvbiIgaHJlZj0iL2ljb24tMTkyLnBuZyI+CiAgICA8c2NyaXB0PgogICAgICAgIGlmICgic2VydmljZVdvcmtlciIgaW4gbmF2aWdhdG9yKSB7CiAgICAgICAgICAgIG5hdmlnYXRvci5zZXJ2aWNlV29ya2VyLnJlZ2lzdGVyKCIvc3cuanMiKS50aGVuKCgpID0+IGNvbnNvbGUubG9nKCJTVyByZWdpc3RlcmVkIikpOwogICAgICAgIH0KICAgIDwvc2NyaXB0PgogICAgPHN0eWxlPgogICAgICAgIDpyb290IHsKICAgICAgICAgICAgLS1wcmltYXJ5OiAjNkI1Qjk1OwogICAgICAgICAgICAtLWFjY2VudDogI0U4OEQ2NzsKICAgICAgICAgICAgLS1kYXJrOiAjMUEyRTQ0OwogICAgICAgICAgICAtLWxpZ2h0OiAjRjhGOUZBOwogICAgICAgICAgICAtLXJhZGl1czogOHB4OwogICAgICAgIH0KICAgICAgICAqIHsgbWFyZ2luOiAwOyBwYWRkaW5nOiAwOyBib3gtc2l6aW5nOiBib3JkZXItYm94OyB9CiAgICAgICAgYm9keSB7IGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmOyBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7IGNvbG9yOiB2YXIoLS1kYXJrKTsgfQogICAgICAgIC5oZXJvIHsgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDEzNWRlZywgIzZCNUI5NSwgIzRBOTBBNCwgIzFBNkM4MSk7IGNvbG9yOiB3aGl0ZTsgdGV4dC1hbGlnbjogY2VudGVyOyBwYWRkaW5nOiAxMDBweCAyMHB4OyB9CiAgICAgICAgLmhlcm8gaDEgeyBmb250LXNpemU6IDQ4cHg7IG1hcmdpbi1ib3R0b206IDIwcHg7IH0KICAgICAgICAuaGVybyBwIHsgZm9udC1zaXplOiAxOHB4OyBtYXgtd2lkdGg6IDYwMHB4OyBtYXJnaW46IDAgYXV0byAzMnB4OyB9CiAgICAgICAgLmJ0biB7IHBhZGRpbmc6IDE0cHggMzJweDsgYmFja2dyb3VuZDogd2hpdGU7IGNvbG9yOiB2YXIoLS1wcmltYXJ5KTsgYm9yZGVyLXJhZGl1czogOHB4OyB0ZXh0LWRlY29yYXRpb246IG5vbmU7IGZvbnQtd2VpZ2h0OiA2MDA7IGRpc3BsYXk6IGlubGluZS1ibG9jazsgbWFyZ2luOiA4cHg7IH0KICAgICAgICBzZWN0aW9uIHsgcGFkZGluZzogNjBweCAyMHB4OyBtYXgtd2lkdGg6IDEyMDBweDsgbWFyZ2luOiAwIGF1dG87IH0KICAgICAgICBoMiB7IGNvbG9yOiB2YXIoLS1wcmltYXJ5KTsgZm9udC1zaXplOiAzMnB4OyBtYXJnaW4tYm90dG9tOiAyNHB4OyB0ZXh0LWFsaWduOiBjZW50ZXI7IH0KICAgICAgICAuZm9vdGVyIHsgYmFja2dyb3VuZDogdmFyKC0tZGFyayk7IGNvbG9yOiB3aGl0ZTsgdGV4dC1hbGlnbjogY2VudGVyOyBwYWRkaW5nOiA0MHB4IDIwcHg7IG1hcmdpbi10b3A6IDQwcHg7IH0KICAgIDwvc3R5bGU+CjwvaGVhZD4KPGJvZHk+CjxoZWFkZXIgY2xhc3M9Imhlcm8iPgogICAgPGgxPjFNT0RFUk4gUkVERVNJR04g8J+TjTwvaDE+CiAgICA8cD5NYXJpYSBNZWRpY2FsIENlbnRlciAtIE5ldyBNb2Rlcm4gRGVzaWduPC9wPgogICAgPGEgaHJlZj0iL2FydGljbGVzLyIgY2xhc3M9ImJ0biI+U3RhcnQgRXhwbG9yaW5nPC9hPgo8L2hlYWRlcj4KPHNlY3Rpb24+CiAgICA8aDI+8J+TjiBTRVJWSUNFUzwvaDI+CiAgICA8cD5BbGwgc2VydmljZXMgYXJlIG5vdyBtb2Rlcm5pemVkIGFuZCBvcHRpbWl6ZWQuPC9wPgo8L3NlY3Rpb24+Cjxmb290ZXIgY2xhc3M9ImZvb3RlciI+CiAgICA8cD7CqSAyMDI2IE1hcmlhIE1lZGljYWwgQ2VudGVyPC9wPgo8L2Zvb3Rlcj4KPC9ib2R5Pgo8L2h0bWw+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медицинский Центр MARIA — Хирургия, Онкология, Гинекология в Харькове</title>
+    <meta name="description" content="Медицинский Центр MARIA в Харькове. Лапароскопия, онкохирургия, гинекология, миомэктомия, скрининг рака. Профессор, доктор медицинских наук, стаж 40 лет. Запись онлайн.">
+    <meta name="keywords" content="медицинский центр харьков, хирург харьков, онколог харьков, гинеколог харьков, лапароскопия харьков, миомэктомия, скрининг рака, профессор Сушков">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Проф. Сушков С.В.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Медицинский Центр MARIA — Хирургия, Онкология, Гинекология в Харькове">
+    <meta property="og:description" content="Миниинвазивная гинекология, абдоминальная хирургия, онкохирургия. Профессор, 40 лет стажа.">
+    <meta property="og:url" content="https://ssvnauka.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://ssvnauka.com/">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#6B5B95">
+    <link rel="apple-touch-icon" href="/icon-192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1428611006597338" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-PLACEHOLDER');
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "Медицинский Центр MARIA",
+      "description": "Медицинский центр в Харькове. Лапароскопия, онкохирургия, гинекология, скрининг рака.",
+      "url": "https://ssvnauka.com",
+      "logo": "https://ssvnauka.com/icon-192.png",
+      "telephone": "+380965015228",
+      "email": "ssvnauka@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Сирохинская, 7-Б",
+        "addressLocality": "Харьков",
+        "addressRegion": "Харьковская область",
+        "addressCountry": "UA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "49.9935",
+        "longitude": "36.2304"
+      },
+      "openingHours": ["Mo-Fr 09:00-18:00", "Sa 09:00-14:00"],
+      "medicalSpecialty": [
+        { "@type": "MedicalSpecialty", "name": "Surgery" },
+        { "@type": "MedicalSpecialty", "name": "Oncology" },
+        { "@type": "MedicalSpecialty", "name": "Gynecology" }
+      ],
+      "founder": {
+        "@type": "Physician",
+        "name": "Сушков Сергей Владимирович",
+        "jobTitle": "Профессор, доктор медицинских наук",
+        "medicalSpecialty": [
+          { "@type": "MedicalSpecialty", "name": "Abdominal Surgery" },
+          { "@type": "MedicalSpecialty", "name": "Oncology" },
+          { "@type": "MedicalSpecialty", "name": "Gynecology" }
+        ]
+      }
+    }
+    </script>
+    <style>
+        :root {
+            --primary: #6B5B95;
+            --primary-dark: #5A4A84;
+            --primary-light: #8B7DB5;
+            --secondary: #4A90A4;
+            --accent: #E88D67;
+            --accent-light: #F0A883;
+            --dark: #1A1A2E;
+            --dark-light: #2D2D44;
+            --light: #F8F9FA;
+            --white: #FFFFFF;
+            --gray: #6C757D;
+            --gray-light: #DEE2E6;
+            --success: #28A745;
+            --gradient-hero: linear-gradient(135deg, #6B5B95 0%, #4A90A4 50%, #2D2D44 100%);
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 8px 32px rgba(0,0,0,0.12);
+            --shadow-lg: 0 16px 48px rgba(0,0,0,0.15);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; overflow-x: hidden; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; line-height: 1.2; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--light); }
+        ::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 4px; }
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(107,91,149,0.08); transition: var(--transition); }
+        .header.scrolled { background: rgba(255,255,255,0.97); box-shadow: var(--shadow-md); }
+        .header-inner { max-width: 1400px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 80px; }
+        .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+        .logo-icon { width: 48px; height: 48px; background: var(--gradient-hero); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; box-shadow: var(--shadow-sm); }
+        .logo-title { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--primary); line-height: 1.1; }
+        .logo-subtitle { font-size: 11px; color: var(--gray); font-weight: 500; letter-spacing: 0.5px; text-transform: uppercase; }
+        .nav-desktop { display: flex; gap: 8px; }
+        .nav-link { padding: 10px 20px; text-decoration: none; color: var(--dark); font-weight: 500; font-size: 14px; border-radius: var(--radius-sm); transition: var(--transition); position: relative; }
+        .nav-link:hover { color: var(--primary); background: rgba(107,91,149,0.06); }
+        .nav-link::after { content: ''; position: absolute; bottom: 4px; left: 20px; right: 20px; height: 2px; background: var(--primary); border-radius: 2px; transform: scaleX(0); transition: transform 0.3s ease; }
+        .nav-link:hover::after { transform: scaleX(1); }
+        .header-actions { display: flex; align-items: center; gap: 16px; }
+        .lang-switch { display: flex; gap: 4px; background: rgba(107,91,149,0.08); padding: 4px; border-radius: var(--radius-sm); }
+        .lang-btn { padding: 6px 12px; border: none; background: transparent; color: var(--gray); font-weight: 600; font-size: 12px; cursor: pointer; border-radius: 6px; transition: var(--transition); font-family: 'Inter', sans-serif; }
+        .lang-btn.active { background: var(--white); color: var(--primary); box-shadow: var(--shadow-sm); }
+        .btn-primary { padding: 12px 28px; background: var(--gradient-hero); color: white; border: none; border-radius: var(--radius-sm); font-weight: 600; font-size: 14px; cursor: pointer; transition: var(--transition); box-shadow: var(--shadow-sm); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .btn-ghost { padding: 12px 28px; background: transparent; color: var(--primary); border: 2px solid rgba(107,91,149,0.2); border-radius: var(--radius-sm); font-weight: 600; font-size: 14px; cursor: pointer; transition: var(--transition); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; }
+        .btn-ghost:hover { background: rgba(107,91,149,0.08); border-color: var(--primary); }
+        .mobile-menu-toggle { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; border: none; background: transparent; cursor: pointer; font-size: 20px; color: var(--dark); }
+        .hero { min-height: 100vh; background: var(--gradient-hero); position: relative; display: flex; align-items: center; overflow: hidden; padding-top: 80px; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.03)" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>'); background-size: cover; background-position: bottom; opacity: 0.3; pointer-events: none; }
+        .hero-particles { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; pointer-events: none; }
+        .particle { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.1); animation: float 20s infinite ease-in-out; }
+        .particle:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 5%; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 200px; height: 200px; top: 60%; left: 70%; animation-delay: -5s; }
+        .particle:nth-child(3) { width: 150px; height: 150px; top: 30%; left: 80%; animation-delay: -10s; }
+        .particle:nth-child(4) { width: 250px; height: 250px; top: 70%; left: 20%; animation-delay: -15s; }
+        @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-30px) rotate(10deg); } }
+        .hero-inner { max-width: 1400px; margin: 0 auto; padding: 80px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 2; }
+        .hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 20px; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; color: white; font-size: 13px; font-weight: 500; margin-bottom: 24px; }
+        .hero-badge .dot { width: 8px; height: 8px; background: #7CFC00; border-radius: 50%; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .hero h1 { font-size: 64px; color: white; margin-bottom: 24px; }
+        .hero h1 span { color: var(--accent-light); }
+        .hero-desc { font-size: 20px; color: rgba(255,255,255,0.85); max-width: 540px; margin-bottom: 40px; line-height: 1.7; }
+        .hero-buttons { display: flex; gap: 16px; }
+        .hero-btn-primary { padding: 16px 36px; background: white; color: var(--primary); border: none; border-radius: var(--radius-sm); font-weight: 700; font-size: 15px; cursor: pointer; transition: var(--transition); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-family: 'Inter', sans-serif; }
+        .hero-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+        .hero-btn-secondary { padding: 16px 36px; background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3); border-radius: var(--radius-sm); font-weight: 600; font-size: 15px; cursor: pointer; transition: var(--transition); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-family: 'Inter', sans-serif; }
+        .hero-btn-secondary:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.5); }
+        .hero-stats { display: flex; gap: 40px; margin-top: 60px; }
+        .hero-stat { text-align: center; }
+        .hero-stat-value { font-size: 36px; font-weight: 700; color: white; font-family: 'Playfair Display', serif; }
+        .hero-stat-label { font-size: 13px; color: rgba(255,255,255,0.7); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .hero-image-wrap { position: relative; }
+        .hero-image { width: 100%; max-width: 540px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg), 0 0 60px rgba(107,91,149,0.3); border: 4px solid rgba(255,255,255,0.1); object-fit: cover; aspect-ratio: 1/1; }
+        .hero-image-badge { position: absolute; bottom: 30px; left: -20px; background: white; padding: 20px 24px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 14px; animation: float 6s ease-in-out infinite; }
+        .hero-image-badge-icon { width: 48px; height: 48px; background: var(--gradient-hero); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .hero-image-badge-title { font-weight: 700; font-size: 14px; color: var(--dark); }
+        .hero-image-badge-sub { font-size: 12px; color: var(--gray); }
+        .section { padding: 100px 32px; max-width: 1400px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 640px; margin: 0 auto 60px; }
+        .section-label { display: inline-block; padding: 8px 20px; background: rgba(107,91,149,0.08); color: var(--primary); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 50px; margin-bottom: 16px; }
+        .section-title { font-size: 42px; color: var(--dark); margin-bottom: 16px; }
+        .section-desc { font-size: 18px; color: var(--gray); line-height: 1.7; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+        .service-card { background: white; border: 1px solid rgba(107,91,149,0.08); border-radius: var(--radius-md); padding: 40px 32px; transition: var(--transition); position: relative; overflow: hidden; cursor: pointer; text-decoration: none; color: inherit; display: block; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--gradient-hero); transform: scaleX(0); transition: transform 0.4s ease; }
+        .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: rgba(107,91,149,0.15); }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-icon { width: 60px; height: 60px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 24px; }
+        .service-icon-1 { background: rgba(107,91,149,0.1); }
+        .service-icon-2 { background: rgba(74,144,164,0.1); }
+        .service-icon-3 { background: rgba(232,141,103,0.1); }
+        .service-icon-4 { background: rgba(107,91,149,0.1); }
+        .service-icon-5 { background: rgba(74,144,164,0.1); }
+        .service-icon-6 { background: rgba(232,141,103,0.1); }
+        .service-title { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--dark); margin-bottom: 12px; }
+        .service-desc { font-size: 15px; color: var(--gray); line-height: 1.7; margin-bottom: 20px; }
+        .service-link { color: var(--primary); font-weight: 600; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+        .service-card:hover .service-link { gap: 10px; }
+        .about { background: var(--dark); position: relative; overflow: hidden; }
+        .about::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: var(--primary); border-radius: 50%; opacity: 0.05; filter: blur(80px); }
+        .about-inner { max-width: 1400px; margin: 0 auto; padding: 100px 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
+        .about-label { display: inline-block; padding: 8px 20px; background: rgba(255,255,255,0.08); color: var(--accent-light); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 50px; margin-bottom: 16px; }
+        .about h2 { font-size: 42px; color: white; margin-bottom: 24px; }
+        .about-text { color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.8; margin-bottom: 32px; }
+        .about-features { display: flex; flex-direction: column; gap: 16px; }
+        .about-feature { display: flex; align-items: center; gap: 16px; }
+        .about-feature-check { width: 32px; height: 32px; background: var(--gradient-hero); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+        .about-feature-text { color: rgba(255,255,255,0.85); font-weight: 500; }
+        .stats-section { background: var(--gradient-hero); padding: 80px 32px; }
+        .stats-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
+        .stat-item { text-align: center; padding: 32px; background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-md); transition: var(--transition); }
+        .stat-item:hover { background: rgba(255,255,255,0.12); transform: translateY(-4px); }
+        .stat-icon { font-size: 36px; margin-bottom: 16px; }
+        .stat-value { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 700; color: white; margin-bottom: 8px; }
+        .stat-label { font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 500; }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 24px; }
+        .why-card { display: flex; gap: 24px; padding: 32px; background: white; border: 1px solid var(--gray-light); border-radius: var(--radius-md); transition: var(--transition); }
+        .why-card:hover { box-shadow: var(--shadow-md); border-color: transparent; transform: translateY(-4px); }
+        .why-icon { width: 56px; height: 56px; border-radius: var(--radius-sm); background: var(--gradient-hero); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; color: white; }
+        .why-content h3 { font-size: 20px; color: var(--dark); margin-bottom: 8px; }
+        .why-content p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+        .cta { background: var(--gradient-hero); padding: 100px 32px; position: relative; overflow: hidden; text-align: center; }
+        .cta-inner { max-width: 800px; margin: 0 auto; }
+        .cta h2 { font-size: 48px; color: white; margin-bottom: 20px; }
+        .cta p { font-size: 18px; color: rgba(255,255,255,0.85); margin-bottom: 40px; line-height: 1.7; }
+        .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .appointment-section { max-width: 600px; margin: 0 auto; padding: 60px 32px; }
+        .appointment-section h2 { text-align: center; color: var(--primary); margin-bottom: 32px; font-size: 32px; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; font-size: 14px; color: var(--dark); }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 14px 16px; border: 1px solid var(--gray-light); border-radius: var(--radius-sm); font-size: 15px; font-family: 'Inter', sans-serif; transition: var(--transition); }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--primary); outline: none; box-shadow: 0 0 0 3px rgba(107,91,149,0.1); }
+        .payment-section { max-width: 600px; margin: 40px auto; padding: 40px; background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%); border-radius: var(--radius-md); border-left: 4px solid var(--success); text-align: center; }
+        .payment-section h2 { color: var(--success); margin-bottom: 1rem; font-size: 24px; }
+        .payment-section p { margin-bottom: 1rem; color: var(--dark); }
+        .btn-success { padding: 14px 32px; background: var(--success); color: white; border: none; border-radius: var(--radius-sm); font-weight: 700; font-size: 15px; cursor: pointer; transition: var(--transition); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; }
+        .btn-success:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+        .articles-section { text-align: center; padding: 60px 32px; background: white; }
+        .articles-section h2 { color: var(--primary); margin-bottom: 24px; }
+        .articles-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 900px; margin: 0 auto; }
+        .article-btn { padding: 14px 28px; background: white; color: var(--primary); border: 2px solid rgba(107,91,149,0.2); border-radius: var(--radius-sm); font-weight: 600; font-size: 14px; cursor: pointer; transition: var(--transition); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+        .article-btn:hover { background: var(--primary); color: white; border-color: var(--primary); transform: translateY(-2px); }
+        .footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 80px 32px 40px; }
+        .footer-inner { max-width: 1400px; margin: 0 auto; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+        .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+        .footer-brand-icon { width: 40px; height: 40px; background: var(--gradient-hero); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+        .footer-brand-title { font-family: 'Playfair Display', serif; font-size: 20px; color: white; font-weight: 700; }
+        .footer-desc { font-size: 14px; line-height: 1.8; margin-bottom: 24px; }
+        .footer-social { display: flex; gap: 12px; }
+        .social-link { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; transition: var(--transition); color: white; }
+        .social-link:hover { background: var(--primary); transform: translateY(-3px); }
+        .footer-col h4 { font-size: 14px; color: white; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; font-weight: 600; }
+        .footer-links { display: flex; flex-direction: column; gap: 12px; }
+        .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 14px; transition: var(--transition); }
+        .footer-links a:hover { color: white; padding-left: 4px; }
+        .footer-contact-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; font-size: 14px; line-height: 1.6; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+        .mobile-menu { display: none; position: fixed; top: 0; right: -100%; width: 300px; height: 100vh; background: white; z-index: 1001; padding: 100px 32px 32px; flex-direction: column; gap: 16px; transition: right 0.4s ease; box-shadow: var(--shadow-lg); }
+        .mobile-menu.open { right: 0; display: flex; }
+        .mobile-menu-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; opacity: 0; transition: opacity 0.3s ease; }
+        .mobile-menu-overlay.open { display: block; opacity: 1; }
+        .mobile-menu-close { position: absolute; top: 24px; right: 24px; width: 40px; height: 40px; border: none; background: transparent; font-size: 24px; cursor: pointer; color: var(--dark); }
+        .mobile-menu a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 18px; padding: 12px 0; border-bottom: 1px solid var(--gray-light); }
+        @media (max-width: 768px) {
+            .header-inner { padding: 0 20px; height: 70px; }
+            .nav-desktop { display: none; }
+            .mobile-menu-toggle { display: flex; }
+            .header-actions .btn-primary { display: none; }
+            .hero-inner { grid-template-columns: 1fr; padding: 60px 20px; text-align: center; }
+            .hero h1 { font-size: 36px; }
+            .hero-desc { font-size: 16px; margin: 0 auto 32px; }
+            .hero-buttons { justify-content: center; flex-wrap: wrap; }
+            .hero-stats { justify-content: center; }
+            .hero-image-wrap { display: none; }
+            .section { padding: 60px 20px; }
+            .section-title { font-size: 32px; }
+            .why-grid { grid-template-columns: 1fr; }
+            .about-inner { grid-template-columns: 1fr; gap: 40px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            .cta h2 { font-size: 32px; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header" id="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">🏥</div>
+            <div class="logo-text">
+                <span class="logo-title">MARIA</span>
+                <span class="logo-subtitle">Medical Center</span>
+            </div>
+        </a>
+        <nav class="nav-desktop">
+            <a href="#services" class="nav-link">Услуги</a>
+            <a href="#about" class="nav-link">О центре</a>
+            <a href="#articles" class="nav-link">Статьи</a>
+            <a href="#appointment" class="nav-link">Запись</a>
+            <a href="#contact" class="nav-link">Контакты</a>
+        </nav>
+        <div class="header-actions">
+            <div class="lang-switch">
+                <a href="?lang=ru" class="lang-btn active" style="text-decoration:none">RU</a>
+                <a href="?lang=uk" class="lang-btn" style="text-decoration:none">UA</a>
+                <a href="?lang=en" class="lang-btn" style="text-decoration:none">EN</a>
+            </div>
+            <a href="#appointment" class="btn-primary">Запись онлайн</a>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </div>
+</header>
+
+<div class="mobile-menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+<div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
+    <a href="#services" onclick="toggleMenu()">Услуги</a>
+    <a href="#about" onclick="toggleMenu()">О центре</a>
+    <a href="#articles" onclick="toggleMenu()">Статьи</a>
+    <a href="#appointment" onclick="toggleMenu()">Запись</a>
+    <a href="#contact" onclick="toggleMenu()">Контакты</a>
+</div>
+
+<section class="hero" id="hero">
+    <div class="hero-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+    <div class="hero-inner">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                <span>Принимаем пациентов</span>
+            </div>
+            <h1>Медицинский Центр <span style="color:var(--accent-light)">MARIA</span></h1>
+            <p class="hero-desc">Профессорская хирургия, онкология и гинекология. Индивидуальный подход, современное оборудование, безопасные операции. Доверьте своё здоровье профессионалам.</p>
+            <div class="hero-buttons">
+                <a href="#appointment" class="hero-btn-primary">📅 Записаться на консультацию</a>
+                <a href="#services" class="hero-btn-secondary">Узнать больше →</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">25+</div>
+                    <div class="hero-stat-label">Лет опыта</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">5000+</div>
+                    <div class="hero-stat-label">Операций</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">98%</div>
+                    <div class="hero-stat-label">Довольных пациентов</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image-wrap">
+            <img src="https://raw.githubusercontent.com/Serg2206/maria-site/main/assets/images/doctor-hero.jpg" alt="Профессор Сушков С.В. — хирург-онколог" class="hero-image" onerror="this.style.display='none'">
+            <div class="hero-image-badge">
+                <div class="hero-image-badge-icon">👨‍⚕️</div>
+                <div>
+                    <div class="hero-image-badge-title">Д-р мед. наук, профессор</div>
+                    <div class="hero-image-badge-sub">Сушков С.В.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="stats-section">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <div class="stat-icon">🏥</div>
+            <div class="stat-value">25+</div>
+            <div class="stat-label">Лет в медицине</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">✂️</div>
+            <div class="stat-value">5000+</div>
+            <div class="stat-label">Успешных операций</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">👨‍👩‍👧‍👦</div>
+            <div class="stat-value">12000+</div>
+            <div class="stat-label">Довольных пациентов</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-icon">🩺</div>
+            <div class="stat-value">6</div>
+            <div class="stat-label">Направлений</div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="services">
+    <div class="section-header">
+        <span class="section-label">Наши услуги</span>
+        <h2 class="section-title">Комплексная медицинская помощь</h2>
+        <p class="section-desc">Современные методы диагностики и лечения в области хирургии, онкологии и гинекологии</p>
+    </div>
+    <div class="services-grid">
+        <a href="/articles/laparoscopic-cholecystectomy-kharkov.html" class="service-card">
+            <div class="service-icon service-icon-1">🩺</div>
+            <h3 class="service-title">Хирургия</h3>
+            <p class="service-desc">Лапароскопия, малоинвазивная хирургия. Удаление желчного пузыря, аппендицит, грыжи и другие операции.</p>
+            <span class="service-link">Подробнее →</span>
+        </a>
+        <a href="/articles/oncologic-surgery-kharkov.html" class="service-card">
+            <div class="service-icon service-icon-2">🎯</div>
+            <h3 class="service-title">Онкохирургия</h3>
+            <p class="service-desc">Лечение рака желудка, кишечника, молочной железы, женских органов. Раннее выявление и комплексная терапия.</p>
+            <span class="service-link">Подробнее →</span>
+        </a>
+        <a href="/articles/gynecology-consultation-kharkov.html" class="service-card">
+            <div class="service-icon service-icon-3">🏥</div>
+            <h3 class="service-title">Гинекология</h3>
+            <p class="service-desc">Профессорская консультация, планирование беременности, лечение женских заболеваний, профилактика.</p>
+            <span class="service-link">Подробнее →</span>
+        </a>
+        <a href="/articles/myomectomy-kharkov.html" class="service-card">
+            <div class="service-icon service-icon-4">🌸</div>
+            <h3 class="service-title">Миомэктомия</h3>
+            <p class="service-desc">Удаление миомы матки с сохранением органа. Планирование беременности после операции.</p>
+            <span class="service-link">Подробнее →</span>
+        </a>
+        <a href="/articles/oncology-screening-kharkov.html" class="service-card">
+            <div class="service-icon service-icon-5">🔬</div>
+            <h3 class="service-title">Онко-диагностика</h3>
+            <p class="service-desc">Скрининг, раннее выявление рака. УЗИ, маммография, кольпоскопия, лабораторные исследования.</p>
+            <span class="service-link">Подробнее →</span>
+        </a>
+        <a href="/articles/oncology-screening-kharkov.html" class="service-card">
+            <div class="service-icon service-icon-6">👨‍⚕️</div>
+            <h3 class="service-title">Профосмотр</h3>
+            <p class="service-desc">Медицинские осмотры, справки, комплексное обследование. Диагностика для профилактики заболеваний.</p>
+            <span class="service-link">Подробнее →</span>
+        </a>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-inner">
+        <div></div>
+        <div class="about-content">
+            <span class="about-label">О центре</span>
+            <h2>Почему доверяют MARIA?</h2>
+            <p class="about-text">Медицинский центр MARIA — это команда высококвалифицированных специалистов с многолетним опытом. Мы используем только современное оборудование и передовые методы лечения. Каждый пациент получает индивидуальный подход и комплексную заботу о здоровье.</p>
+            <div class="about-features">
+                <div class="about-feature">
+                    <div class="about-feature-check">✓</div>
+                    <span class="about-feature-text">Современное оборудование и технологии</span>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-check">✓</div>
+                    <span class="about-feature-text">Индивидуальный подход к каждому пациенту</span>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-check">✓</div>
+                    <span class="about-feature-text">Безопасные и щадящие методы лечения</span>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-check">✓</div>
+                    <span class="about-feature-text">Сопровождение на всех этапах лечения</span>
+                </div>
+                <div class="about-feature">
+                    <div class="about-feature-check">✓</div>
+                    <span class="about-feature-text">Конфиденциальность и комфорт</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="why">
+    <div class="section-header">
+        <span class="section-label">Преимущества</span>
+        <h2 class="section-title">Почему выбирают MARIA</h2>
+        <p class="section-desc">Мы создаём комфортные условия для вашего здоровья и спокойствия</p>
+    </div>
+    <div class="why-grid">
+        <div class="why-card">
+            <div class="why-icon">🎓</div>
+            <div class="why-content">
+                <h3>Профессорский уровень</h3>
+                <p>Врачи с учёными степенями и многолетним опытом практики. Постоянное повышение квалификации.</p>
+            </div>
+        </div>
+        <div class="why-card">
+            <div class="why-icon">🔬</div>
+            <div class="why-content">
+                <h3>Современное оборудование</h3>
+                <p>Лапароскопическая стойка, аппарат УЗИ экспертного класса, современная лаборатория.</p>
+            </div>
+        </div>
+        <div class="why-card">
+            <div class="why-icon">🛡️</div>
+            <div class="why-content">
+                <h3>Безопасность и комфорт</h3>
+                <p>Щадящие малоинвазивные методы, короткий период реабилитации, комфортные палаты.</p>
+            </div>
+        </div>
+        <div class="why-card">
+            <div class="why-icon">📋</div>
+            <div class="why-content">
+                <h3>Комплексный подход</h3>
+                <p>От диагностики до реабилитации — полный цикл лечения под наблюдением одной команды.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="articles-section" id="articles">
+    <h2 class="section-title">📖 Полезные статьи от профессора</h2>
+    <p class="section-desc">Читайте экспертные материалы о здоровье, диагностике и лечении</p>
+    <div class="articles-grid" style="margin-top:32px">
+        <a href="/articles/laparoscopic-cholecystectomy-kharkov.html" class="article-btn">Лапароскопия</a>
+        <a href="/articles/myomectomy-kharkov.html" class="article-btn">Миомэктомия</a>
+        <a href="/articles/oncology-screening-kharkov.html" class="article-btn">Скрининг рака</a>
+        <a href="/articles/gynecology-consultation-kharkov.html" class="article-btn">Гинекология</a>
+        <a href="/articles/oncologic-surgery-kharkov.html" class="article-btn">Онкохирургия</a>
+        <a href="/articles/" class="article-btn">Все статьи →</a>
+    </div>
+</section>
+
+<section class="cta" id="contact">
+    <div class="cta-inner">
+        <h2>Запишитесь на консультацию</h2>
+        <p>Получите профессиональную консультацию опытного хирурга-онколога. Индивидуальный подход, современная диагностика, эффективное лечение.</p>
+        <div class="cta-buttons">
+            <a href="https://t.me/SSVPROFF_MEDICAL_BOT" class="hero-btn-primary" target="_blank">📱 Telegram бот</a>
+            <a href="tel:+380965015228" class="hero-btn-secondary">📞 +380 96 501 52 28</a>
+        </div>
+    </div>
+</section>
+
+<section class="appointment-section" id="appointment">
+    <h2>📅 Записаться на приём</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="gtag('event', 'form_submit', { event_category: 'appointment', event_label: 'form_spree' });">
+        <div class="form-group">
+            <label>Ваше имя *</label>
+            <input type="text" name="name" required placeholder="Иван Иванов">
+        </div>
+        <div class="form-group">
+            <label>Телефон *</label>
+            <input type="tel" name="phone" required placeholder="+380 XX XXX XX XX">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+            <label>Направление *</label>
+            <select name="service" required>
+                <option value="">Выберите направление</option>
+                <option value="gynecology">Гинекология</option>
+                <option value="surgery">Хирургия</option>
+                <option value="oncology">Онкология</option>
+                <option value="consultation">Консультация</option>
+                <option value="ultrasound">УЗИ диагностика</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Дата</label>
+            <input type="date" name="preferred_date">
+        </div>
+        <div class="form-group">
+            <label>Комментарий</label>
+            <textarea name="message" rows="3" placeholder="Опишите симптомы..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%; justify-content:center">📞 Отправить заявку</button>
+    </form>
+    <p style="text-align:center; margin-top:16px">Или: <a href="https://t.me/SSVPROFF_MEDICAL_BOT" class="btn-primary" style="background:#0088cc; margin-top:8px">Telegram бот</a></p>
+</section>
+
+<section class="payment-section" id="payment">
+    <h2>💳 Онлайн-оплата консультации</h2>
+    <p>Консультация профессора — <strong>500 грн</strong></p>
+    <p>После оплаты мы свяжемся с вами в течение 1 часа для согласования времени.</p>
+    <a href="https://secure.wayforpay.com/pay?merchantAccount=YOUR_MERCHANT_ID&orderReference=MARIA-CONSULT-001&amount=500&currency=UAH&productName=Консультация%20профессора&clientEmail=ssvnauka@gmail.com" 
+       class="btn-success" target="_blank" rel="noopener" 
+       onclick="gtag('event', 'purchase', { value: 500, currency: 'UAH' });">
+        💳 Оплатить 500 грн
+    </a>
+    <p style="font-size: 0.85rem; color: #666; margin-top: 1rem;">
+        Также доступно: <a href="https://t.me/SSVPROFF_MEDICAL_BOT" style="color:var(--primary)">Telegram бот</a> | 
+        <a href="tel:+380965015228" style="color:var(--primary)">+380 96 501 52 28</a>
+    </p>
+</section>
+
+<footer class="footer" id="contact">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">
+                    <div class="footer-brand-icon">🏥</div>
+                    <span class="footer-brand-title">MARIA Medical Center</span>
+                </div>
+                <p class="footer-desc">Медицинский центр MARIA — профессиональная хирургия, онкология и гинекология в Харькове. Индивидуальный подход к каждому пациенту.</p>
+                <div class="footer-social">
+                    <a href="https://t.me/SSVPROFF_MEDICAL_BOT" class="social-link" title="Telegram">✈️</a>
+                    <a href="#" class="social-link" title="Facebook">f</a>
+                    <a href="#" class="social-link" title="YouTube">▶️</a>
+                </div>
+            </div>
+            <div>
+                <h4>Услуги</h4>
+                <div class="footer-links">
+                    <a href="/articles/laparoscopic-cholecystectomy-kharkov.html">Хирургия</a>
+                    <a href="/articles/oncologic-surgery-kharkov.html">Онкохирургия</a>
+                    <a href="/articles/gynecology-consultation-kharkov.html">Гинекология</a>
+                    <a href="/articles/oncology-screening-kharkov.html">Онко-диагностика</a>
+                </div>
+            </div>
+            <div>
+                <h4>Информация</h4>
+                <div class="footer-links">
+                    <a href="#about">О центре</a>
+                    <a href="#articles">Статьи</a>
+                    <a href="#appointment">Запись</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+            </div>
+            <div>
+                <h4>Контакты</h4>
+                <div class="footer-contact-item">
+                    <span>📍</span>
+                    <span>г. Харьков, ул. Сирохинская, 7-Б</span>
+                </div>
+                <div class="footer-contact-item">
+                    <span>📞</span>
+                    <span>+380 96 501 52 28</span>
+                </div>
+                <div class="footer-contact-item">
+                    <span>📧</span>
+                    <span>ssvnauka@gmail.com</span>
+                </div>
+                <div class="footer-contact-item">
+                    <span>🕐</span>
+                    <span>Пн-Пт: 9:00 — 18:00</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Медицинский Центр MARIA. Все права защищены.</span>
+            <span>Создано с профессиональной заботой о вашем здоровье</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 50) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+    });
+    function toggleMenu() {
+        document.getElementById('mobileMenu').classList.toggle('open');
+        document.getElementById('menuOverlay').classList.toggle('open');
+    }
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js").then(() => console.log("SW registered"));
+    }
+</script>
+
+</body>
+</html>
