@@ -2,13 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ssvnauka.com/</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ssvnauka.com/articles/</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -20,37 +20,37 @@
   </url>
   <url>
     <loc>https://ssvnauka.com/articles/breast-cancer-screening-kharkov.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ssvnauka.com/articles/laparoscopic-cholecystectomy-kharkov.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ssvnauka.com/articles/myomectomy-kharkov.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ssvnauka.com/articles/oncology-screening-kharkov.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ssvnauka.com/articles/gynecology-consultation-kharkov.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ssvnauka.com/articles/oncologic-surgery-kharkov.html</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -59,5 +59,17 @@
     <lastmod>2026-06-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ssvnauka.com/articles/multimodal-analgesia-eras.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ssvnauka.com/guides/self-check-breast.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 </urlset>
