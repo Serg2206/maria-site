@@ -239,6 +239,7 @@
         .mobile-menu-close { position: absolute; top: 24px; right: 24px; width: 40px; height: 40px; border: none; background: transparent; font-size: 24px; cursor: pointer; color: var(--dark); }
         .mobile-menu a { text-decoration: none; color: var(--dark); font-weight: 600; font-size: 18px; padding: 12px 0; border-bottom: 1px solid var(--gray-light); }
         .deploy-trigger { display: none; }
+        .adsense { margin: 2rem auto; text-align: center; min-height: 90px; background: #f8f9fa; border: 1px dashed #ddd; display: flex; align-items: center; justify-content: center; color: #999; font-size: 0.85rem; }
         @media (max-width: 768px) {
             .header-inner { padding: 0 20px; height: 70px; }
             .nav-desktop { display: none; }
@@ -554,10 +555,16 @@
     <p style="text-align:center; margin-top:16px">Или: <a href="https://t.me/SSVPROFF_MEDICAL_BOT" class="btn-primary" style="background:#0088cc; margin-top:8px">Telegram бот</a></p>
 </section>
 
+<div class="adsense">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1428611006597338" data-ad-slot="PLACEHOLDER_AD_SLOT_HOMEPAGE" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+
 <section class="payment-section" id="payment">
     <h2>💳 Онлайн-оплата консультации</h2>
     <p>Консультация профессора — <strong>500 грн</strong></p>
     <p>После оплаты мы свяжемся с вами в течение 1 часа для согласования времени.</p>
+    <!-- ЗАМЕНИТЕ: YOUR_MERCHANT_ID на реальный Merchant ID из личного кабинета WayForPay -->
     <a href="https://secure.wayforpay.com/pay?merchantAccount=YOUR_MERCHANT_ID&orderReference=MARIA-CONSULT-001&amount=500&currency=UAH&productName=Консультация%20профессора&clientEmail=ssvnauka@gmail.com" 
        class="btn-success" target="_blank" rel="noopener" 
        onclick="gtag('event', 'purchase', { value: 500, currency: 'UAH' });">
