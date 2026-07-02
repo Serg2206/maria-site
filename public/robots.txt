@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /test-base64.html
+Disallow: /deploy-trigger.md
 
 Host: https://ssvnauka.com
-
 Sitemap: https://ssvnauka.com/sitemap.xml
