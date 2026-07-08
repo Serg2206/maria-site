@@ -92,6 +92,8 @@
           "medicalSpecialty": ["Surgery", "Oncology", "Gynecology"],
           "sameAs": [
             "https://t.me/SSVPROFF_MEDICAL_BOT",
+            "https://www.instagram.com/suhovssv/",
+            "https://www.threads.com/@suhovssv",
             "https://orcid.org/0000-0002-6951-9789",
             "https://www.scopus.com/authid/detail.uri?authorId=55360196800"
           ]
@@ -109,6 +111,8 @@
           "medicalSpecialty": ["Surgery", "Oncology", "Gynecology"],
           "worksFor": {"@id": "https://ssvnauka.com/#organization"},
           "sameAs": [
+            "https://www.instagram.com/suhovssv/",
+            "https://www.threads.com/@suhovssv",
             "https://orcid.org/0000-0002-6951-9789",
             "https://www.scopus.com/authid/detail.uri?authorId=55360196800"
           ]
@@ -185,7 +189,7 @@
         .hero h1 { font-size: 64px; color: white; margin-bottom: 24px; }
         .hero h1 span { color: var(--accent-light); }
         .hero-desc { font-size: 20px; color: rgba(255,255,255,0.85); max-width: 540px; margin-bottom: 40px; line-height: 1.7; }
-        .hero-buttons { display: flex; gap: 16px; }
+        .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
         .hero-btn-primary { padding: 16px 36px; background: white; color: var(--primary); border: none; border-radius: var(--radius-sm); font-weight: 700; font-size: 15px; cursor: pointer; transition: var(--transition); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-family: 'Inter', sans-serif; }
         .hero-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
         .hero-btn-secondary { padding: 16px 36px; background: rgba(255,255,255,0.1); color: white; border: 2px solid rgba(255,255,255,0.3); border-radius: var(--radius-sm); font-weight: 600; font-size: 15px; cursor: pointer; transition: var(--transition); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; font-family: 'Inter', sans-serif; }
@@ -227,6 +231,7 @@
         .about-label { display: inline-block; padding: 8px 20px; background: rgba(255,255,255,0.08); color: var(--accent-light); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; border-radius: 50px; margin-bottom: 16px; }
         .about h2 { font-size: 42px; color: white; margin-bottom: 24px; }
         .about-text { color: rgba(255,255,255,0.7); font-size: 16px; line-height: 1.8; margin-bottom: 32px; }
+        .about-portrait { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); object-fit: cover; aspect-ratio: 4/5; border: 4px solid rgba(255,255,255,0.06); }
         .about-features { display: flex; flex-direction: column; gap: 16px; }
         .about-feature { display: flex; align-items: center; gap: 16px; }
         .about-feature-check { width: 32px; height: 32px; background: var(--gradient-hero); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
@@ -244,6 +249,16 @@
         .why-icon { width: 56px; height: 56px; border-radius: var(--radius-sm); background: var(--gradient-hero); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; color: white; }
         .why-content h3 { font-size: 20px; color: var(--dark); margin-bottom: 8px; }
         .why-content p { font-size: 14px; color: var(--gray); line-height: 1.7; }
+        .community { background: var(--light); }
+        .community-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; max-width: 1040px; margin: 0 auto; }
+        .community-btn { display: flex; align-items: center; gap: 16px; padding: 20px 24px; background: white; border: 1px solid var(--gray-light); border-radius: var(--radius-md); text-decoration: none; color: var(--dark); transition: var(--transition); position: relative; }
+        .community-btn:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: transparent; }
+        .community-btn .ci { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: white; flex-shrink: 0; }
+        .community-btn .cname { font-weight: 700; font-size: 15px; }
+        .community-btn .cdesc { font-size: 12px; color: var(--gray); margin-top: 2px; }
+        .community-btn.pending { opacity: 0.55; cursor: default; }
+        .community-btn.pending:hover { transform: none; box-shadow: none; border-color: var(--gray-light); }
+        .community-btn .soon { position: absolute; top: 10px; right: 12px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--accent); background: rgba(232,141,103,0.12); padding: 2px 8px; border-radius: 20px; }
         .cta { background: var(--gradient-hero); padding: 100px 32px; position: relative; overflow: hidden; text-align: center; }
         .cta-inner { max-width: 800px; margin: 0 auto; }
         .cta h2 { font-size: 48px; color: white; margin-bottom: 20px; }
@@ -269,8 +284,8 @@
         .footer-brand-icon { width: 40px; height: 40px; background: var(--gradient-hero); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
         .footer-brand-title { font-family: 'Playfair Display', serif; font-size: 20px; color: white; font-weight: 700; }
         .footer-desc { font-size: 14px; line-height: 1.8; margin-bottom: 24px; }
-        .footer-social { display: flex; gap: 12px; }
-        .social-link { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; transition: var(--transition); color: white; }
+        .footer-social { display: flex; gap: 12px; flex-wrap: wrap; }
+        .social-link { width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 16px; font-weight: 700; transition: var(--transition); color: white; }
         .social-link:hover { background: var(--primary); transform: translateY(-3px); }
         .footer-col h4 { font-size: 14px; color: white; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; font-weight: 600; }
         .footer-links { display: flex; flex-direction: column; gap: 12px; }
@@ -318,32 +333,34 @@
             </div>
         </a>
         <nav class="nav-desktop">
-            <a href="#services" class="nav-link">Услуги</a>
-            <a href="#about" class="nav-link">О центре</a>
-            <a href="#articles" class="nav-link">Статьи</a>
-            <a href="#appointment" class="nav-link">Запись</a>
-            <a href="#contact" class="nav-link">Контакты</a>
+            <a href="#services" class="nav-link" data-i18n="nav.services">Услуги</a>
+            <a href="#about" class="nav-link" data-i18n="nav.about">О центре</a>
+            <a href="#articles" class="nav-link" data-i18n="nav.articles">Статьи</a>
+            <a href="#community" class="nav-link" data-i18n="nav.community">Соцсети</a>
+            <a href="#appointment" class="nav-link" data-i18n="nav.appointment">Запись</a>
+            <a href="#contact" class="nav-link" data-i18n="nav.contact">Контакты</a>
         </nav>
         <div class="header-actions">
             <div class="lang-switch">
-                <a href="?lang=ru" class="lang-btn active">RU</a>
-                <a href="?lang=uk" class="lang-btn">UA</a>
-                <a href="?lang=en" class="lang-btn">EN</a>
+                <button type="button" class="lang-btn" data-lang="ru">RU</button>
+                <button type="button" class="lang-btn" data-lang="uk">UA</button>
+                <button type="button" class="lang-btn" data-lang="en">EN</button>
             </div>
-            <a href="#appointment" class="btn-primary">Запись онлайн</a>
-            <button class="mobile-menu-toggle" onclick="toggleMenu()">☰</button>
+            <a href="#appointment" class="btn-primary" data-i18n="btn.book">Запись онлайн</a>
+            <button class="mobile-menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
         </div>
     </div>
 </header>
 
 <div class="mobile-menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
 <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
-    <a href="#services" onclick="toggleMenu()">Услуги</a>
-    <a href="#about" onclick="toggleMenu()">О центре</a>
-    <a href="#articles" onclick="toggleMenu()">Статьи</a>
-    <a href="#appointment" onclick="toggleMenu()">Запись</a>
-    <a href="#contact" onclick="toggleMenu()">Контакты</a>
+    <button class="mobile-menu-close" onclick="toggleMenu()" aria-label="Close">✕</button>
+    <a href="#services" onclick="toggleMenu()" data-i18n="nav.services">Услуги</a>
+    <a href="#about" onclick="toggleMenu()" data-i18n="nav.about">О центре</a>
+    <a href="#articles" onclick="toggleMenu()" data-i18n="nav.articles">Статьи</a>
+    <a href="#community" onclick="toggleMenu()" data-i18n="nav.community">Соцсети</a>
+    <a href="#appointment" onclick="toggleMenu()" data-i18n="nav.appointment">Запись</a>
+    <a href="#contact" onclick="toggleMenu()" data-i18n="nav.contact">Контакты</a>
 </div>
 
 <section class="hero" id="hero">
@@ -357,26 +374,26 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="dot"></span>
-                <span>Принимаем пациентов</span>
+                <span data-i18n="hero.badge">Принимаем пациентов</span>
             </div>
-            <h1>Медицинский Центр <span>MARIA</span></h1>
-            <p class="hero-desc">Профессорская хирургия, онкология и гинекология. Индивидуальный подход, современное оборудование, безопасные операции. Д-р мед. наук, профессор Сушков С.В. — 40+ лет опыта.</p>
+            <h1 data-i18n-html="hero.title">Медицинский Центр <span>MARIA</span></h1>
+            <p class="hero-desc" data-i18n="hero.desc">Профессорская хирургия, онкология и гинекология. Индивидуальный подход, современное оборудование, безопасные операции. Д-р мед. наук, профессор Сушков С.В. — 40+ лет опыта.</p>
             <div class="hero-buttons">
-                <a href="#appointment" class="hero-btn-primary">📅 Записаться на консультацию</a>
-                <a href="#services" class="hero-btn-secondary">Узнать больше →</a>
+                <a href="#appointment" class="hero-btn-primary" data-i18n="hero.btn1">📅 Записаться на консультацию</a>
+                <a href="#services" class="hero-btn-secondary" data-i18n="hero.btn2">Узнать больше →</a>
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
                     <div class="hero-stat-value">40+</div>
-                    <div class="hero-stat-label">Лет опыта</div>
+                    <div class="hero-stat-label" data-i18n="hero.stat1">Лет опыта</div>
                 </div>
                 <div class="hero-stat">
                     <div class="hero-stat-value">5000+</div>
-                    <div class="hero-stat-label">Операций</div>
+                    <div class="hero-stat-label" data-i18n="hero.stat2">Операций</div>
                 </div>
                 <div class="hero-stat">
                     <div class="hero-stat-value">98%</div>
-                    <div class="hero-stat-label">Довольных пациентов</div>
+                    <div class="hero-stat-label" data-i18n="hero.stat3">Довольных пациентов</div>
                 </div>
             </div>
         </div>
@@ -385,8 +402,8 @@
             <div class="hero-image-badge">
                 <div class="hero-image-badge-icon">👨‍⚕️</div>
                 <div>
-                    <div class="hero-image-badge-title">Д-р мед. наук, профессор</div>
-                    <div class="hero-image-badge-sub">Сушков Сергей Валентинович</div>
+                    <div class="hero-image-badge-title" data-i18n="hero.badgeTitle">Д-р мед. наук, профессор</div>
+                    <div class="hero-image-badge-sub" data-i18n="hero.badgeSub">Сушков Сергей Валентинович</div>
                 </div>
             </div>
         </div>
@@ -398,104 +415,106 @@
         <div class="stat-item">
             <div class="stat-icon">🏥</div>
             <div class="stat-value">40+</div>
-            <div class="stat-label">Лет в медицине</div>
+            <div class="stat-label" data-i18n="stats.years">Лет в медицине</div>
         </div>
         <div class="stat-item">
             <div class="stat-icon">✂️</div>
             <div class="stat-value">5000+</div>
-            <div class="stat-label">Успешных операций</div>
+            <div class="stat-label" data-i18n="stats.ops">Успешных операций</div>
         </div>
         <div class="stat-item">
             <div class="stat-icon">👨‍👩‍👧‍👦</div>
             <div class="stat-value">12000+</div>
-            <div class="stat-label">Довольных пациентов</div>
+            <div class="stat-label" data-i18n="stats.patients">Довольных пациентов</div>
         </div>
         <div class="stat-item">
             <div class="stat-icon">📚</div>
             <div class="stat-value">121</div>
-            <div class="stat-label">Публикаций</div>
+            <div class="stat-label" data-i18n="stats.pubs">Публикаций</div>
         </div>
         <div class="stat-item">
             <div class="stat-icon">🩺</div>
             <div class="stat-value">6</div>
-            <div class="stat-label">Направлений</div>
+            <div class="stat-label" data-i18n="stats.specialties">Направлений</div>
         </div>
     </div>
 </section>
 
 <section class="section" id="services">
     <div class="section-header">
-        <span class="section-label">Наши услуги</span>
-        <h2 class="section-title">Комплексная медицинская помощь</h2>
-        <p class="section-desc">Современные методы диагностики и лечения в области хирургии, онкологии и гинекологии</p>
+        <span class="section-label" data-i18n="services.label">Наши услуги</span>
+        <h2 class="section-title" data-i18n="services.title">Комплексная медицинская помощь</h2>
+        <p class="section-desc" data-i18n="services.desc">Современные методы диагностики и лечения в области хирургии, онкологии и гинекологии</p>
     </div>
     <div class="services-grid">
         <a href="/articles/laparoscopic-cholecystectomy-kharkov.html" class="service-card">
             <div class="service-icon service-icon-1">🩺</div>
-            <h3 class="service-title">Хирургия</h3>
-            <p class="service-desc">Лапароскопия Karl Storz Full HD. Удаление желчного пузыря, аппендицит, грыжи. Выписка на 2–3-й день.</p>
-            <span class="service-link">Подробнее →</span>
+            <h3 class="service-title" data-i18n="svc1.title">Хирургия</h3>
+            <p class="service-desc" data-i18n="svc1.desc">Лапароскопия Karl Storz Full HD. Удаление желчного пузыря, аппендицит, грыжи. Выписка на 2–3-й день.</p>
+            <span class="service-link" data-i18n="svc.more">Подробнее →</span>
         </a>
         <a href="/articles/oncologic-surgery-kharkov.html" class="service-card">
             <div class="service-icon service-icon-2">🎯</div>
-            <h3 class="service-title">Онкохирургия</h3>
-            <p class="service-desc">Лечение рака желудка, кишечника, молочной железы, женских органов. Раннее выявление и комплексная терапия.</p>
-            <span class="service-link">Подробнее →</span>
+            <h3 class="service-title" data-i18n="svc2.title">Онкохирургия</h3>
+            <p class="service-desc" data-i18n="svc2.desc">Лечение рака желудка, кишечника, молочной железы, женских органов. Раннее выявление и комплексная терапия.</p>
+            <span class="service-link" data-i18n="svc.more">Подробнее →</span>
         </a>
         <a href="/articles/gynecology-consultation-kharkov.html" class="service-card">
             <div class="service-icon service-icon-3">🏥</div>
-            <h3 class="service-title">Гинекология</h3>
-            <p class="service-desc">Профессорская консультация, планирование беременности, лечение женских заболеваний, профилактика.</p>
-            <span class="service-link">Подробнее →</span>
+            <h3 class="service-title" data-i18n="svc3.title">Гинекология</h3>
+            <p class="service-desc" data-i18n="svc3.desc">Профессорская консультация, планирование беременности, лечение женских заболеваний, профилактика.</p>
+            <span class="service-link" data-i18n="svc.more">Подробнее →</span>
         </a>
         <a href="/articles/myomectomy-kharkov.html" class="service-card">
             <div class="service-icon service-icon-4">🌸</div>
-            <h3 class="service-title">Миомэктомия</h3>
-            <p class="service-desc">Удаление миомы матки с сохранением органа и репродуктивной функции. Операции любой сложности.</p>
-            <span class="service-link">Подробнее →</span>
+            <h3 class="service-title" data-i18n="svc4.title">Миомэктомия</h3>
+            <p class="service-desc" data-i18n="svc4.desc">Удаление миомы матки с сохранением органа и репродуктивной функции. Операции любой сложности.</p>
+            <span class="service-link" data-i18n="svc.more">Подробнее →</span>
         </a>
         <a href="/articles/oncology-screening-kharkov.html" class="service-card">
             <div class="service-icon service-icon-5">🔬</div>
-            <h3 class="service-title">Онко-диагностика</h3>
-            <p class="service-desc">Скрининг, раннее выявление рака. УЗИ экспертного класса, маммография, кольпоскопия, онкомаркёры.</p>
-            <span class="service-link">Подробнее →</span>
+            <h3 class="service-title" data-i18n="svc5.title">Онко-диагностика</h3>
+            <p class="service-desc" data-i18n="svc5.desc">Скрининг, раннее выявление рака. УЗИ экспертного класса, маммография, кольпоскопия, онкомаркёры.</p>
+            <span class="service-link" data-i18n="svc.more">Подробнее →</span>
         </a>
         <a href="/articles/oncology-screening-kharkov.html" class="service-card">
             <div class="service-icon service-icon-6">👨‍⚕️</div>
-            <h3 class="service-title">Профосмотр</h3>
-            <p class="service-desc">Медицинские осмотры, справки, комплексное обследование за один визит. Быстрая выдача документов.</p>
-            <span class="service-link">Подробнее →</span>
+            <h3 class="service-title" data-i18n="svc6.title">Профосмотр</h3>
+            <p class="service-desc" data-i18n="svc6.desc">Медицинские осмотры, справки, комплексное обследование за один визит. Быстрая выдача документов.</p>
+            <span class="service-link" data-i18n="svc.more">Подробнее →</span>
         </a>
     </div>
 </section>
 
 <section class="about" id="about">
     <div class="about-inner">
-        <div></div>
+        <div>
+            <img src="/images/doctor-portrait.jpg" alt="Профессор Сушков Сергей Валентинович — хирург-онколог" class="about-portrait" onerror="this.style.display='none'">
+        </div>
         <div class="about-content">
-            <span class="about-label">О центре</span>
-            <h2>Почему доверяют MARIA?</h2>
-            <p class="about-text">Медицинский центр MARIA — команда высококвалифицированных специалистов с многолетним опытом. Пионер лапароскопической хирургии в Харькове с 1995 года. Член Европейской ассоциации эндоскопических хирургов (EAES). Каждый пациент получает индивидуальный подход.</p>
+            <span class="about-label" data-i18n="nav.about">О центре</span>
+            <h2 data-i18n="about.title">Почему доверяют MARIA?</h2>
+            <p class="about-text" data-i18n="about.text">Медицинский центр MARIA — команда высококвалифицированных специалистов с многолетним опытом. Пионер лапароскопической хирургии в Харькове с 1995 года. Член Европейской ассоциации эндоскопических хирургов (EAES). Каждый пациент получает индивидуальный подход.</p>
             <div class="about-features">
                 <div class="about-feature">
                     <div class="about-feature-check">✓</div>
-                    <span class="about-feature-text">Д-р мед. наук, профессор — h-index 6, 121 публикация, 18 патентов</span>
+                    <span class="about-feature-text" data-i18n="about.f1">Д-р мед. наук, профессор — h-index 6, 121 публикация, 18 патентов</span>
                 </div>
                 <div class="about-feature">
                     <div class="about-feature-check">✓</div>
-                    <span class="about-feature-text">Лапароскопическая стойка Karl Storz Full HD</span>
+                    <span class="about-feature-text" data-i18n="about.f2">Лапароскопическая стойка Karl Storz Full HD</span>
                 </div>
                 <div class="about-feature">
                     <div class="about-feature-check">✓</div>
-                    <span class="about-feature-text">Безопасные малоинвазивные методы — выписка на 2–4-й день</span>
+                    <span class="about-feature-text" data-i18n="about.f3">Безопасные малоинвазивные методы — выписка на 2–4-й день</span>
                 </div>
                 <div class="about-feature">
                     <div class="about-feature-check">✓</div>
-                    <span class="about-feature-text">Полный цикл: консультация → операция → реабилитация</span>
+                    <span class="about-feature-text" data-i18n="about.f4">Полный цикл: консультация → операция → реабилитация</span>
                 </div>
                 <div class="about-feature">
                     <div class="about-feature-check">✓</div>
-                    <span class="about-feature-text">Конфиденциальность и индивидуальный комфорт</span>
+                    <span class="about-feature-text" data-i18n="about.f5">Конфиденциальность и индивидуальный комфорт</span>
                 </div>
             </div>
         </div>
@@ -504,64 +523,110 @@
 
 <section class="section" id="why">
     <div class="section-header">
-        <span class="section-label">Преимущества</span>
-        <h2 class="section-title">Почему выбирают MARIA</h2>
-        <p class="section-desc">Мы создаём комфортные условия для вашего здоровья и спокойствия</p>
+        <span class="section-label" data-i18n="why.label">Преимущества</span>
+        <h2 class="section-title" data-i18n="why.title">Почему выбирают MARIA</h2>
+        <p class="section-desc" data-i18n="why.desc">Мы создаём комфортные условия для вашего здоровья и спокойствия</p>
     </div>
     <div class="why-grid">
         <div class="why-card">
             <div class="why-icon">🎓</div>
             <div class="why-content">
-                <h3>Профессорский уровень</h3>
-                <p>Д-р мед. наук, профессор, h-index 6, 121 публикация. Диагностику ведёт тот же хирург, что оперирует — без информационных потерь.</p>
+                <h3 data-i18n="why1.title">Профессорский уровень</h3>
+                <p data-i18n="why1.desc">Д-р мед. наук, профессор, h-index 6, 121 публикация. Диагностику ведёт тот же хирург, что оперирует — без информационных потерь.</p>
             </div>
         </div>
         <div class="why-card">
             <div class="why-icon">🔬</div>
             <div class="why-content">
-                <h3>Karl Storz Full HD</h3>
-                <p>Немецкая лапароскопическая стойка, УЗИ экспертного класса. Видит то, что пропустит обычная клиника.</p>
+                <h3 data-i18n="why2.title">Karl Storz Full HD</h3>
+                <p data-i18n="why2.desc">Немецкая лапароскопическая стойка, УЗИ экспертного класса. Видит то, что пропустит обычная клиника.</p>
             </div>
         </div>
         <div class="why-card">
             <div class="why-icon">🛡️</div>
             <div class="why-content">
-                <h3>Миниинвазивность</h3>
-                <p>Большинство операций — через 3 прокола до 1 см. Косметический шов, минимальная кровопотеря, выписка на 2–4-й день.</p>
+                <h3 data-i18n="why3.title">Миниинвазивность</h3>
+                <p data-i18n="why3.desc">Большинство операций — через 3 прокола до 1 см. Косметический шов, минимальная кровопотеря, выписка на 2–4-й день.</p>
             </div>
         </div>
         <div class="why-card">
             <div class="why-icon">📋</div>
             <div class="why-content">
-                <h3>Комплексный подход</h3>
-                <p>От диагностики до реабилитации — полный цикл лечения под наблюдением одного специалиста. Без переводов и очередей.</p>
+                <h3 data-i18n="why4.title">Комплексный подход</h3>
+                <p data-i18n="why4.desc">От диагностики до реабилитации — полный цикл лечения под наблюдением одного специалиста. Без переводов и очередей.</p>
             </div>
         </div>
     </div>
 </section>
 
 <section class="articles-section" id="articles">
-    <h2 class="section-title">📖 Полезные статьи от профессора</h2>
-    <p class="section-desc">Читайте экспертные материалы о здоровье, диагностике и лечении</p>
+    <h2 class="section-title" data-i18n="articles.title">📖 Полезные статьи от профессора</h2>
+    <p class="section-desc" data-i18n="articles.desc">Читайте экспертные материалы о здоровье, диагностике и лечении</p>
     <div class="articles-grid" style="margin-top:32px">
-        <a href="/articles/multimodal-analgesia-eras.html" class="article-btn">Мультимодальная анальгезия</a>
-        <a href="/articles/laparoscopic-cholecystectomy-kharkov.html" class="article-btn">Лапароскопия</a>
-        <a href="/articles/myomectomy-kharkov.html" class="article-btn">Миомэктомия</a>
-        <a href="/articles/oncology-screening-kharkov.html" class="article-btn">Скрининг рака</a>
-        <a href="/articles/gynecology-consultation-kharkov.html" class="article-btn">Гинекология</a>
-        <a href="/articles/oncologic-surgery-kharkov.html" class="article-btn">Онкохирургия</a>
-        <a href="/articles/breast-cancer-screening-kharkov.html" class="article-btn">Маммография</a>
-        <a href="/articles/ercp-vs-cholecystectomy.html" class="article-btn">ERCP vs Холецистэктомия</a>
-        <a href="/articles/" class="article-btn">Все статьи →</a>
+        <a href="/articles/multimodal-analgesia-eras.html" class="article-btn" data-i18n="art.analgesia">Мультимодальная анальгезия</a>
+        <a href="/articles/laparoscopic-cholecystectomy-kharkov.html" class="article-btn" data-i18n="art.laparoscopy">Лапароскопия</a>
+        <a href="/articles/myomectomy-kharkov.html" class="article-btn" data-i18n="art.myomectomy">Миомэктомия</a>
+        <a href="/articles/oncology-screening-kharkov.html" class="article-btn" data-i18n="art.screening">Скрининг рака</a>
+        <a href="/articles/gynecology-consultation-kharkov.html" class="article-btn" data-i18n="art.gynecology">Гинекология</a>
+        <a href="/articles/oncologic-surgery-kharkov.html" class="article-btn" data-i18n="art.oncosurgery">Онкохирургия</a>
+        <a href="/articles/breast-cancer-screening-kharkov.html" class="article-btn" data-i18n="art.mammography">Маммография</a>
+        <a href="/articles/ercp-vs-cholecystectomy.html" class="article-btn" data-i18n="art.ercp">ERCP vs Холецистэктомия</a>
+        <a href="/articles/" class="article-btn" data-i18n="art.all">Все статьи →</a>
+    </div>
+</section>
+
+<section class="section community" id="community">
+    <div class="section-header">
+        <span class="section-label" data-i18n="community.label">Сообщество</span>
+        <h2 class="section-title" data-i18n="community.title">Соцсети и сообщество</h2>
+        <p class="section-desc" data-i18n="community.desc">Подписывайтесь на профессора Сушкова, задавайте вопросы ботам и вступайте в закрытую группу SSVproff</p>
+    </div>
+    <div class="community-grid" id="communityGrid">
+        <a class="community-btn" data-social="telegramBot" target="_blank" rel="noopener">
+            <span class="ci" style="background:#0088cc">✈️</span>
+            <span><span class="cname">Telegram-бот</span><span class="cdesc" data-i18n="comm.bot">Онлайн-запись 24/7</span></span>
+        </a>
+        <a class="community-btn" data-social="telegramChannel" target="_blank" rel="noopener">
+            <span class="ci" style="background:#229ED9">📣</span>
+            <span><span class="cname">Telegram-канал</span><span class="cdesc" data-i18n="comm.channel">Новости и советы</span></span>
+        </a>
+        <a class="community-btn" data-social="facebook" target="_blank" rel="noopener">
+            <span class="ci" style="background:#1877F2">f</span>
+            <span><span class="cname">Facebook</span><span class="cdesc" data-i18n="comm.fb">Страница центра</span></span>
+        </a>
+        <a class="community-btn" data-social="fbGroup" target="_blank" rel="noopener">
+            <span class="ci" style="background:#0866FF">👥</span>
+            <span><span class="cname">SSVproff</span><span class="cdesc" data-i18n="comm.group">Закрытая FB-группа</span></span>
+        </a>
+        <a class="community-btn" data-social="instagram" target="_blank" rel="noopener">
+            <span class="ci" style="background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF)">📷</span>
+            <span><span class="cname">Instagram</span><span class="cdesc" data-i18n="comm.ig">Фото и истории</span></span>
+        </a>
+        <a class="community-btn" data-social="threads" target="_blank" rel="noopener">
+            <span class="ci" style="background:#000000">@</span>
+            <span><span class="cname">Threads</span><span class="cdesc" data-i18n="comm.threads">Заметки профессора</span></span>
+        </a>
+        <a class="community-btn" data-social="youtube" target="_blank" rel="noopener">
+            <span class="ci" style="background:#FF0000">▶</span>
+            <span><span class="cname">YouTube</span><span class="cdesc" data-i18n="comm.yt">Видео об операциях</span></span>
+        </a>
+        <a class="community-btn" data-social="whatsapp" target="_blank" rel="noopener">
+            <span class="ci" style="background:#25D366">💬</span>
+            <span><span class="cname">WhatsApp</span><span class="cdesc" data-i18n="comm.wa">Сообщение врачу</span></span>
+        </a>
+        <a class="community-btn" data-social="viber">
+            <span class="ci" style="background:#7360F2">📱</span>
+            <span><span class="cname">Viber</span><span class="cdesc" data-i18n="comm.viber">Быстрая связь</span></span>
+        </a>
     </div>
 </section>
 
 <section class="cta" id="contact">
     <div class="cta-inner">
-        <h2>Запишитесь на консультацию</h2>
-        <p>Получите профессиональную консультацию опытного хирурга-онколога. Индивидуальный подход, современная диагностика, эффективное лечение. Стоимость консультации — <strong>2000 грн</strong>.</p>
+        <h2 data-i18n="cta.title">Запишитесь на консультацию</h2>
+        <p data-i18n-html="cta.desc">Получите профессиональную консультацию опытного хирурга-онколога. Индивидуальный подход, современная диагностика, эффективное лечение. Стоимость консультации — <strong>2000 грн</strong>.</p>
         <div class="cta-buttons">
-            <a href="https://t.me/SSVPROFF_MEDICAL_BOT" class="hero-btn-primary" target="_blank" rel="noopener">📱 Telegram бот</a>
+            <a href="https://t.me/SSVPROFF_MEDICAL_BOT" class="hero-btn-primary" target="_blank" rel="noopener" data-i18n="cta.tg">📱 Telegram бот</a>
             <a href="tel:+380675707949" class="hero-btn-secondary">📞 +380 67 570 79 49</a>
             <a href="https://wa.me/380675707949" class="hero-btn-secondary" target="_blank" rel="noopener">💬 WhatsApp</a>
         </div>
@@ -569,38 +634,38 @@
 </section>
 
 <section class="appointment-section" id="appointment">
-    <h2>📅 Записаться на приём</h2>
-    <p class="appointment-price">Консультация профессора — <strong>2000 грн</strong></p>
+    <h2 data-i18n="appt.title">📅 Записаться на приём</h2>
+    <p class="appointment-price" data-i18n-html="appt.price">Консультация профессора — <strong>2000 грн</strong></p>
     <form action="https://formspree.io/f/xjgqrgrr" method="POST" onsubmit="gtag('event', 'form_submit', { event_category: 'appointment', event_label: 'form_spree' });">
         <div class="form-group">
-            <label>Ваше имя *</label>
-            <input type="text" name="name" required placeholder="Иван Иванов">
+            <label data-i18n="appt.name">Ваше имя *</label>
+            <input type="text" name="name" required placeholder="Иван Иванов" data-i18n-placeholder="appt.namePh">
         </div>
         <div class="form-group">
-            <label>Телефон *</label>
+            <label data-i18n="appt.phone">Телефон *</label>
             <input type="tel" name="phone" required placeholder="+380 XX XXX XX XX">
         </div>
         <div class="form-group">
-            <label>Email</label>
+            <label data-i18n="appt.email">Email</label>
             <input type="email" name="email" placeholder="email@example.com">
         </div>
         <div class="form-group">
-            <label>Направление *</label>
+            <label data-i18n="appt.service">Направление *</label>
             <select name="service" required>
-                <option value="">Выберите направление</option>
-                <option value="gynecology">Гинекология</option>
-                <option value="surgery">Хирургия</option>
-                <option value="oncology">Онкология</option>
-                <option value="myomectomy">Миомэктомия</option>
-                <option value="onco-diagnostics">Онко-диагностика</option>
-                <option value="consultation">Консультация</option>
-                <option value="ultrasound">УЗИ диагностика</option>
+                <option value="" data-i18n="appt.selectService">Выберите направление</option>
+                <option value="gynecology" data-i18n="appt.optGyn">Гинекология</option>
+                <option value="surgery" data-i18n="appt.optSurg">Хирургия</option>
+                <option value="oncology" data-i18n="appt.optOnco">Онкология</option>
+                <option value="myomectomy" data-i18n="appt.optMyo">Миомэктомия</option>
+                <option value="onco-diagnostics" data-i18n="appt.optDiag">Онко-диагностика</option>
+                <option value="consultation" data-i18n="appt.optConsult">Консультация</option>
+                <option value="ultrasound" data-i18n="appt.optUzi">УЗИ диагностика</option>
             </select>
         </div>
         <div class="form-group">
-            <label>Удобное время звонка</label>
+            <label data-i18n="appt.time">Удобное время звонка</label>
             <select name="preferred_time">
-                <option value="">любое время</option>
+                <option value="" data-i18n="appt.anytime">любое время</option>
                 <option value="9-11">09:00 – 11:00</option>
                 <option value="11-13">11:00 – 13:00</option>
                 <option value="13-15">13:00 – 15:00</option>
@@ -608,10 +673,10 @@
             </select>
         </div>
         <div class="form-group">
-            <label>Комментарий</label>
-            <textarea name="message" rows="3" placeholder="Опишите жалобы или задайте вопрос..."></textarea>
+            <label data-i18n="appt.comment">Комментарий</label>
+            <textarea name="message" rows="3" placeholder="Опишите жалобы или задайте вопрос..." data-i18n-placeholder="appt.commentPh"></textarea>
         </div>
-        <button type="submit" class="btn-primary" style="width:100%; justify-content:center">📞 Отправить заявку</button>
+        <button type="submit" class="btn-primary" style="width:100%; justify-content:center" data-i18n="appt.submit">📞 Отправить заявку</button>
     </form>
     <div style="text-align:center; margin-top:20px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
         <a href="https://t.me/SSVPROFF_MEDICAL_BOT" class="btn-primary" style="background:#0088cc" target="_blank" rel="noopener">✈️ Telegram бот</a>
@@ -634,38 +699,43 @@
                     <div class="footer-brand-icon">🏥</div>
                     <span class="footer-brand-title">MARIA Medical Center</span>
                 </div>
-                <p class="footer-desc">Медицинский центр MARIA — профессиональная хирургия, онкология и гинекология в Харькове. Профессор Сушков С.В., 40+ лет опыта, 5000+ операций.</p>
-                <div class="footer-social">
+                <p class="footer-desc" data-i18n="footer.desc">Медицинский центр MARIA — профессиональная хирургия, онкология и гинекология в Харькове. Профессор Сушков С.В., 40+ лет опыта, 5000+ операций.</p>
+                <div class="footer-social" id="footerSocial">
                     <a href="https://t.me/SSVPROFF_MEDICAL_BOT" class="social-link" title="Telegram" target="_blank" rel="noopener">✈️</a>
                     <a href="https://wa.me/380675707949" class="social-link" title="WhatsApp" target="_blank" rel="noopener">💬</a>
                     <a href="viber://chat?number=+380675707949" class="social-link" title="Viber">📱</a>
+                    <a href="https://www.instagram.com/suhovssv/" class="social-link" title="Instagram" target="_blank" rel="noopener">📷</a>
+                    <a href="https://www.threads.com/@suhovssv" class="social-link" title="Threads" target="_blank" rel="noopener">@</a>
+                    <a class="social-link" data-social="facebook" title="Facebook" target="_blank" rel="noopener">f</a>
+                    <a class="social-link" data-social="fbGroup" title="SSVproff" target="_blank" rel="noopener">👥</a>
+                    <a class="social-link" data-social="youtube" title="YouTube" target="_blank" rel="noopener">▶</a>
                 </div>
             </div>
             <div>
-                <h4>Услуги</h4>
+                <h4 data-i18n="footer.services">Услуги</h4>
                 <div class="footer-links">
-                    <a href="/articles/laparoscopic-cholecystectomy-kharkov.html">Хирургия</a>
-                    <a href="/articles/oncologic-surgery-kharkov.html">Онкохирургия</a>
-                    <a href="/articles/gynecology-consultation-kharkov.html">Гинекология</a>
-                    <a href="/articles/myomectomy-kharkov.html">Миомэктомия</a>
-                    <a href="/articles/oncology-screening-kharkov.html">Онко-диагностика</a>
+                    <a href="/articles/laparoscopic-cholecystectomy-kharkov.html" data-i18n="svc1.title">Хирургия</a>
+                    <a href="/articles/oncologic-surgery-kharkov.html" data-i18n="svc2.title">Онкохирургия</a>
+                    <a href="/articles/gynecology-consultation-kharkov.html" data-i18n="svc3.title">Гинекология</a>
+                    <a href="/articles/myomectomy-kharkov.html" data-i18n="svc4.title">Миомэктомия</a>
+                    <a href="/articles/oncology-screening-kharkov.html" data-i18n="svc5.title">Онко-диагностика</a>
                 </div>
             </div>
             <div>
-                <h4>Информация</h4>
+                <h4 data-i18n="footer.info">Информация</h4>
                 <div class="footer-links">
-                    <a href="#about">О центре</a>
-                    <a href="/articles/">Статьи</a>
-                    <a href="#appointment">Запись</a>
+                    <a href="#about" data-i18n="nav.about">О центре</a>
+                    <a href="/articles/" data-i18n="nav.articles">Статьи</a>
+                    <a href="#appointment" data-i18n="nav.appointment">Запись</a>
                     <a href="https://orcid.org/0000-0002-6951-9789" target="_blank" rel="noopener">ORCID</a>
                     <a href="https://www.scopus.com/authid/detail.uri?authorId=55360196800" target="_blank" rel="noopener">Scopus</a>
                 </div>
             </div>
             <div>
-                <h4>Контакты</h4>
+                <h4 data-i18n="footer.contacts">Контакты</h4>
                 <div class="footer-contact-item">
                     <span>📍</span>
-                    <span>г. Харьков, вул. Сірохінська, 7-Б</span>
+                    <span data-i18n="footer.address">г. Харьков, вул. Сірохінська, 7-Б</span>
                 </div>
                 <div class="footer-contact-item">
                     <span>📞</span>
@@ -677,33 +747,174 @@
                 </div>
                 <div class="footer-contact-item">
                     <span>🕐</span>
-                    <span>Пн-Пт: 9:00 — 18:00<br>Сб: по записи</span>
+                    <span data-i18n-html="footer.hours">Пн-Пт: 9:00 — 18:00<br>Сб: по записи</span>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© 2026 Медицинский Центр MARIA. Все права защищены.</span>
+            <span data-i18n="footer.copyright">© 2026 Медицинский Центр MARIA. Все права защищены.</span>
             <span>
-                <a href="/privacy-policy.html" style="color:inherit; margin-right:16px">Конфиденциальность</a>
-                <a href="/medical-disclaimer.html" style="color:inherit">Медицинский дисклеймер</a>
+                <a href="/privacy-policy.html" style="color:inherit; margin-right:16px" data-i18n="footer.privacy">Конфиденциальность</a>
+                <a href="/medical-disclaimer.html" style="color:inherit" data-i18n="footer.disclaimer">Медицинский дисклеймер</a>
             </span>
         </div>
     </div>
 </footer>
 
 <script>
-    window.addEventListener('scroll', function() {
-        const header = document.getElementById('header');
-        if (window.scrollY > 50) header.classList.add('scrolled');
-        else header.classList.remove('scrolled');
+/* ============================================================
+   СОЦСЕТИ И БОТЫ — заполните ссылки ниже.
+   Пустое значение "" = кнопка показывается как «скоро» и не кликается.
+   Как только вставите URL — кнопка автоматически станет активной.
+   ============================================================ */
+const SOCIAL = {
+    telegramBot:     "https://t.me/SSVPROFF_MEDICAL_BOT",
+    whatsapp:        "https://wa.me/380675707949",
+    viber:           "viber://chat?number=+380675707949",
+    instagram:       "https://www.instagram.com/suhovssv/",
+    threads:         "https://www.threads.com/@suhovssv",
+    telegramChannel: "",   // напр. https://t.me/ssvproff
+    facebook:        "",   // FB-страница центра
+    fbGroup:         "",   // закрытая группа SSVproff, напр. https://www.facebook.com/groups/ssvproff
+    youtube:         ""    // напр. https://youtube.com/@ssvnauka
+};
+
+/* ---------- Мультиязычность RU / UK / EN ---------- */
+const I18N = {
+  ru: {
+    "nav.services":"Услуги","nav.about":"О центре","nav.articles":"Статьи","nav.community":"Соцсети","nav.appointment":"Запись","nav.contact":"Контакты","btn.book":"Запись онлайн",
+    "hero.badge":"Принимаем пациентов","hero.title":"Медицинский Центр <span>MARIA</span>","hero.desc":"Профессорская хирургия, онкология и гинекология. Индивидуальный подход, современное оборудование, безопасные операции. Д-р мед. наук, профессор Сушков С.В. — 40+ лет опыта.","hero.btn1":"📅 Записаться на консультацию","hero.btn2":"Узнать больше →","hero.stat1":"Лет опыта","hero.stat2":"Операций","hero.stat3":"Довольных пациентов","hero.badgeTitle":"Д-р мед. наук, профессор","hero.badgeSub":"Сушков Сергей Валентинович",
+    "stats.years":"Лет в медицине","stats.ops":"Успешных операций","stats.patients":"Довольных пациентов","stats.pubs":"Публикаций","stats.specialties":"Направлений",
+    "services.label":"Наши услуги","services.title":"Комплексная медицинская помощь","services.desc":"Современные методы диагностики и лечения в области хирургии, онкологии и гинекологии","svc.more":"Подробнее →",
+    "svc1.title":"Хирургия","svc1.desc":"Лапароскопия Karl Storz Full HD. Удаление желчного пузыря, аппендицит, грыжи. Выписка на 2–3-й день.",
+    "svc2.title":"Онкохирургия","svc2.desc":"Лечение рака желудка, кишечника, молочной железы, женских органов. Раннее выявление и комплексная терапия.",
+    "svc3.title":"Гинекология","svc3.desc":"Профессорская консультация, планирование беременности, лечение женских заболеваний, профилактика.",
+    "svc4.title":"Миомэктомия","svc4.desc":"Удаление миомы матки с сохранением органа и репродуктивной функции. Операции любой сложности.",
+    "svc5.title":"Онко-диагностика","svc5.desc":"Скрининг, раннее выявление рака. УЗИ экспертного класса, маммография, кольпоскопия, онкомаркёры.",
+    "svc6.title":"Профосмотр","svc6.desc":"Медицинские осмотры, справки, комплексное обследование за один визит. Быстрая выдача документов.",
+    "about.title":"Почему доверяют MARIA?","about.text":"Медицинский центр MARIA — команда высококвалифицированных специалистов с многолетним опытом. Пионер лапароскопической хирургии в Харькове с 1995 года. Член Европейской ассоциации эндоскопических хирургов (EAES). Каждый пациент получает индивидуальный подход.","about.f1":"Д-р мед. наук, профессор — h-index 6, 121 публикация, 18 патентов","about.f2":"Лапароскопическая стойка Karl Storz Full HD","about.f3":"Безопасные малоинвазивные методы — выписка на 2–4-й день","about.f4":"Полный цикл: консультация → операция → реабилитация","about.f5":"Конфиденциальность и индивидуальный комфорт",
+    "why.label":"Преимущества","why.title":"Почему выбирают MARIA","why.desc":"Мы создаём комфортные условия для вашего здоровья и спокойствия","why1.title":"Профессорский уровень","why1.desc":"Д-р мед. наук, профессор, h-index 6, 121 публикация. Диагностику ведёт тот же хирург, что оперирует — без информационных потерь.","why2.title":"Karl Storz Full HD","why2.desc":"Немецкая лапароскопическая стойка, УЗИ экспертного класса. Видит то, что пропустит обычная клиника.","why3.title":"Миниинвазивность","why3.desc":"Большинство операций — через 3 прокола до 1 см. Косметический шов, минимальная кровопотеря, выписка на 2–4-й день.","why4.title":"Комплексный подход","why4.desc":"От диагностики до реабилитации — полный цикл лечения под наблюдением одного специалиста. Без переводов и очередей.",
+    "articles.title":"📖 Полезные статьи от профессора","articles.desc":"Читайте экспертные материалы о здоровье, диагностике и лечении","art.analgesia":"Мультимодальная анальгезия","art.laparoscopy":"Лапароскопия","art.myomectomy":"Миомэктомия","art.screening":"Скрининг рака","art.gynecology":"Гинекология","art.oncosurgery":"Онкохирургия","art.mammography":"Маммография","art.ercp":"ERCP vs Холецистэктомия","art.all":"Все статьи →",
+    "community.label":"Сообщество","community.title":"Соцсети и сообщество","community.desc":"Подписывайтесь на профессора Сушкова, задавайте вопросы ботам и вступайте в закрытую группу SSVproff","comm.bot":"Онлайн-запись 24/7","comm.channel":"Новости и советы","comm.fb":"Страница центра","comm.group":"Закрытая FB-группа","comm.ig":"Фото и истории","comm.threads":"Заметки профессора","comm.yt":"Видео об операциях","comm.wa":"Сообщение врачу","comm.viber":"Быстрая связь","comm.soon":"скоро",
+    "cta.title":"Запишитесь на консультацию","cta.desc":"Получите профессиональную консультацию опытного хирурга-онколога. Индивидуальный подход, современная диагностика, эффективное лечение. Стоимость консультации — <strong>2000 грн</strong>.","cta.tg":"📱 Telegram бот",
+    "appt.title":"📅 Записаться на приём","appt.price":"Консультация профессора — <strong>2000 грн</strong>","appt.name":"Ваше имя *","appt.namePh":"Иван Иванов","appt.phone":"Телефон *","appt.email":"Email","appt.service":"Направление *","appt.selectService":"Выберите направление","appt.optGyn":"Гинекология","appt.optSurg":"Хирургия","appt.optOnco":"Онкология","appt.optMyo":"Миомэктомия","appt.optDiag":"Онко-диагностика","appt.optConsult":"Консультация","appt.optUzi":"УЗИ диагностика","appt.time":"Удобное время звонка","appt.anytime":"любое время","appt.comment":"Комментарий","appt.commentPh":"Опишите жалобы или задайте вопрос...","appt.submit":"📞 Отправить заявку",
+    "footer.desc":"Медицинский центр MARIA — профессиональная хирургия, онкология и гинекология в Харькове. Профессор Сушков С.В., 40+ лет опыта, 5000+ операций.","footer.services":"Услуги","footer.info":"Информация","footer.contacts":"Контакты","footer.address":"г. Харьков, вул. Сірохінська, 7-Б","footer.hours":"Пн-Пт: 9:00 — 18:00<br>Сб: по записи","footer.copyright":"© 2026 Медицинский Центр MARIA. Все права защищены.","footer.privacy":"Конфиденциальность","footer.disclaimer":"Медицинский дисклеймер"
+  },
+  uk: {
+    "nav.services":"Послуги","nav.about":"Про центр","nav.articles":"Статті","nav.community":"Соцмережі","nav.appointment":"Запис","nav.contact":"Контакти","btn.book":"Онлайн-запис",
+    "hero.badge":"Приймаємо пацієнтів","hero.title":"Медичний Центр <span>MARIA</span>","hero.desc":"Професорська хірургія, онкологія та гінекологія. Індивідуальний підхід, сучасне обладнання, безпечні операції. Д-р мед. наук, професор Сушков С.В. — 40+ років досвіду.","hero.btn1":"📅 Записатися на консультацію","hero.btn2":"Дізнатися більше →","hero.stat1":"Років досвіду","hero.stat2":"Операцій","hero.stat3":"Задоволених пацієнтів","hero.badgeTitle":"Д-р мед. наук, професор","hero.badgeSub":"Сушков Сергій Валентинович",
+    "stats.years":"Років у медицині","stats.ops":"Успішних операцій","stats.patients":"Задоволених пацієнтів","stats.pubs":"Публікацій","stats.specialties":"Напрямків",
+    "services.label":"Наші послуги","services.title":"Комплексна медична допомога","services.desc":"Сучасні методи діагностики та лікування у галузі хірургії, онкології та гінекології","svc.more":"Детальніше →",
+    "svc1.title":"Хірургія","svc1.desc":"Лапароскопія Karl Storz Full HD. Видалення жовчного міхура, апендицит, грижі. Виписка на 2–3-й день.",
+    "svc2.title":"Онкохірургія","svc2.desc":"Лікування раку шлунка, кишечника, молочної залози, жіночих органів. Раннє виявлення та комплексна терапія.",
+    "svc3.title":"Гінекологія","svc3.desc":"Професорська консультація, планування вагітності, лікування жіночих захворювань, профілактика.",
+    "svc4.title":"Міомектомія","svc4.desc":"Видалення міоми матки зі збереженням органа та репродуктивної функції. Операції будь-якої складності.",
+    "svc5.title":"Онко-діагностика","svc5.desc":"Скринінг, раннє виявлення раку. УЗД експертного класу, мамографія, кольпоскопія, онкомаркери.",
+    "svc6.title":"Профогляд","svc6.desc":"Медичні огляди, довідки, комплексне обстеження за один візит. Швидка видача документів.",
+    "about.title":"Чому довіряють MARIA?","about.text":"Медичний центр MARIA — команда висококваліфікованих фахівців з багаторічним досвідом. Піонер лапароскопічної хірургії у Харкові з 1995 року. Член Європейської асоціації ендоскопічних хірургів (EAES). Кожен пацієнт отримує індивідуальний підхід.","about.f1":"Д-р мед. наук, професор — h-index 6, 121 публікація, 18 патентів","about.f2":"Лапароскопічна стійка Karl Storz Full HD","about.f3":"Безпечні малоінвазивні методи — виписка на 2–4-й день","about.f4":"Повний цикл: консультація → операція → реабілітація","about.f5":"Конфіденційність та індивідуальний комфорт",
+    "why.label":"Переваги","why.title":"Чому обирають MARIA","why.desc":"Ми створюємо комфортні умови для вашого здоров'я та спокою","why1.title":"Професорський рівень","why1.desc":"Д-р мед. наук, професор, h-index 6, 121 публікація. Діагностику веде той самий хірург, що оперує — без втрати інформації.","why2.title":"Karl Storz Full HD","why2.desc":"Німецька лапароскопічна стійка, УЗД експертного класу. Бачить те, що пропустить звичайна клініка.","why3.title":"Мініінвазивність","why3.desc":"Більшість операцій — через 3 проколи до 1 см. Косметичний шов, мінімальна крововтрата, виписка на 2–4-й день.","why4.title":"Комплексний підхід","why4.desc":"Від діагностики до реабілітації — повний цикл лікування під наглядом одного фахівця. Без переведень і черг.",
+    "articles.title":"📖 Корисні статті від професора","articles.desc":"Читайте експертні матеріали про здоров'я, діагностику та лікування","art.analgesia":"Мультимодальна анальгезія","art.laparoscopy":"Лапароскопія","art.myomectomy":"Міомектомія","art.screening":"Скринінг раку","art.gynecology":"Гінекологія","art.oncosurgery":"Онкохірургія","art.mammography":"Мамографія","art.ercp":"ERCP проти Холецистектомії","art.all":"Усі статті →",
+    "community.label":"Спільнота","community.title":"Соцмережі та спільнота","community.desc":"Підписуйтесь на професора Сушкова, ставте питання ботам та вступайте до закритої групи SSVproff","comm.bot":"Онлайн-запис 24/7","comm.channel":"Новини та поради","comm.fb":"Сторінка центру","comm.group":"Закрита FB-група","comm.ig":"Фото та історії","comm.threads":"Нотатки професора","comm.yt":"Відео про операції","comm.wa":"Повідомлення лікарю","comm.viber":"Швидкий зв'язок","comm.soon":"скоро",
+    "cta.title":"Запишіться на консультацію","cta.desc":"Отримайте професійну консультацію досвідченого хірурга-онколога. Індивідуальний підхід, сучасна діагностика, ефективне лікування. Вартість консультації — <strong>2000 грн</strong>.","cta.tg":"📱 Telegram бот",
+    "appt.title":"📅 Записатися на прийом","appt.price":"Консультація професора — <strong>2000 грн</strong>","appt.name":"Ваше ім'я *","appt.namePh":"Іван Іванов","appt.phone":"Телефон *","appt.email":"Email","appt.service":"Напрямок *","appt.selectService":"Оберіть напрямок","appt.optGyn":"Гінекологія","appt.optSurg":"Хірургія","appt.optOnco":"Онкологія","appt.optMyo":"Міомектомія","appt.optDiag":"Онко-діагностика","appt.optConsult":"Консультація","appt.optUzi":"УЗД діагностика","appt.time":"Зручний час дзвінка","appt.anytime":"будь-який час","appt.comment":"Коментар","appt.commentPh":"Опишіть скарги або поставте запитання...","appt.submit":"📞 Надіслати заявку",
+    "footer.desc":"Медичний центр MARIA — професійна хірургія, онкологія та гінекологія у Харкові. Професор Сушков С.В., 40+ років досвіду, 5000+ операцій.","footer.services":"Послуги","footer.info":"Інформація","footer.contacts":"Контакти","footer.address":"м. Харків, вул. Сірохінська, 7-Б","footer.hours":"Пн-Пт: 9:00 — 18:00<br>Сб: за записом","footer.copyright":"© 2026 Медичний Центр MARIA. Усі права захищені.","footer.privacy":"Конфіденційність","footer.disclaimer":"Медичний дисклеймер"
+  },
+  en: {
+    "nav.services":"Services","nav.about":"About","nav.articles":"Articles","nav.community":"Social","nav.appointment":"Appointment","nav.contact":"Contacts","btn.book":"Book online",
+    "hero.badge":"Now accepting patients","hero.title":"MARIA <span>Medical Center</span>","hero.desc":"Professor-led surgery, oncology and gynecology. Individual approach, modern equipment, safe operations. MD, PhD, Professor Sergiy Sushkov — 40+ years of experience.","hero.btn1":"📅 Book a consultation","hero.btn2":"Learn more →","hero.stat1":"Years of experience","hero.stat2":"Operations","hero.stat3":"Satisfied patients","hero.badgeTitle":"MD, PhD, Professor","hero.badgeSub":"Sergiy V. Sushkov",
+    "stats.years":"Years in medicine","stats.ops":"Successful operations","stats.patients":"Satisfied patients","stats.pubs":"Publications","stats.specialties":"Specialties",
+    "services.label":"Our services","services.title":"Comprehensive medical care","services.desc":"Modern diagnostics and treatment in surgery, oncology and gynecology","svc.more":"Learn more →",
+    "svc1.title":"Surgery","svc1.desc":"Karl Storz Full HD laparoscopy. Gallbladder removal, appendicitis, hernias. Discharge on day 2–3.",
+    "svc2.title":"Oncosurgery","svc2.desc":"Treatment of stomach, bowel, breast and gynecologic cancers. Early detection and comprehensive therapy.",
+    "svc3.title":"Gynecology","svc3.desc":"Professor consultation, pregnancy planning, treatment of women's diseases, prevention.",
+    "svc4.title":"Myomectomy","svc4.desc":"Uterine fibroid removal preserving the organ and fertility. Operations of any complexity.",
+    "svc5.title":"Cancer screening","svc5.desc":"Screening and early cancer detection. Expert-class ultrasound, mammography, colposcopy, tumor markers.",
+    "svc6.title":"Health check-up","svc6.desc":"Medical check-ups, certificates, full examination in one visit. Fast document issuance.",
+    "about.title":"Why patients trust MARIA?","about.text":"MARIA Medical Center is a team of highly qualified specialists with many years of experience. Pioneer of laparoscopic surgery in Kharkiv since 1995. Member of the European Association for Endoscopic Surgery (EAES). Every patient receives an individual approach.","about.f1":"MD, PhD, Professor — h-index 6, 121 publications, 18 patents","about.f2":"Karl Storz Full HD laparoscopy system","about.f3":"Safe minimally invasive methods — discharge on day 2–4","about.f4":"Full cycle: consultation → surgery → rehabilitation","about.f5":"Confidentiality and individual comfort",
+    "why.label":"Advantages","why.title":"Why choose MARIA","why.desc":"We create comfortable conditions for your health and peace of mind","why1.title":"Professor-level expertise","why1.desc":"MD, PhD, Professor, h-index 6, 121 publications. The same surgeon who operates performs the diagnosis — no information lost.","why2.title":"Karl Storz Full HD","why2.desc":"German laparoscopy system, expert-class ultrasound. Sees what an ordinary clinic would miss.","why3.title":"Minimally invasive","why3.desc":"Most operations through 3 punctures up to 1 cm. Cosmetic suture, minimal blood loss, discharge on day 2–4.","why4.title":"Comprehensive approach","why4.desc":"From diagnosis to rehabilitation — a full treatment cycle under one specialist. No referrals or queues.",
+    "articles.title":"📖 Useful articles from the professor","articles.desc":"Read expert materials on health, diagnostics and treatment","art.analgesia":"Multimodal analgesia","art.laparoscopy":"Laparoscopy","art.myomectomy":"Myomectomy","art.screening":"Cancer screening","art.gynecology":"Gynecology","art.oncosurgery":"Oncosurgery","art.mammography":"Mammography","art.ercp":"ERCP vs Cholecystectomy","art.all":"All articles →",
+    "community.label":"Community","community.title":"Social media & community","community.desc":"Follow Professor Sushkov, ask our bots and join the closed SSVproff group","comm.bot":"Online booking 24/7","comm.channel":"News and tips","comm.fb":"Center page","comm.group":"Closed FB group","comm.ig":"Photos and stories","comm.threads":"Professor's notes","comm.yt":"Surgery videos","comm.wa":"Message the doctor","comm.viber":"Quick contact","comm.soon":"soon",
+    "cta.title":"Book a consultation","cta.desc":"Get a professional consultation from an experienced oncologic surgeon. Individual approach, modern diagnostics, effective treatment. Consultation fee — <strong>UAH 2000</strong>.","cta.tg":"📱 Telegram bot",
+    "appt.title":"📅 Book an appointment","appt.price":"Professor consultation — <strong>UAH 2000</strong>","appt.name":"Your name *","appt.namePh":"John Smith","appt.phone":"Phone *","appt.email":"Email","appt.service":"Specialty *","appt.selectService":"Select specialty","appt.optGyn":"Gynecology","appt.optSurg":"Surgery","appt.optOnco":"Oncology","appt.optMyo":"Myomectomy","appt.optDiag":"Cancer screening","appt.optConsult":"Consultation","appt.optUzi":"Ultrasound","appt.time":"Preferred call time","appt.anytime":"any time","appt.comment":"Comment","appt.commentPh":"Describe symptoms or ask a question...","appt.submit":"📞 Send request",
+    "footer.desc":"MARIA Medical Center — professional surgery, oncology and gynecology in Kharkiv. Professor Sushkov, 40+ years of experience, 5000+ operations.","footer.services":"Services","footer.info":"Information","footer.contacts":"Contacts","footer.address":"Kharkiv, Sirokhinska St, 7-B","footer.hours":"Mon-Fri: 9:00 — 18:00<br>Sat: by appointment","footer.copyright":"© 2026 MARIA Medical Center. All rights reserved.","footer.privacy":"Privacy","footer.disclaimer":"Medical disclaimer"
+  }
+};
+
+function applyLang(lang) {
+    if (!I18N[lang]) lang = 'ru';
+    const dict = I18N[lang];
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const v = dict[el.getAttribute('data-i18n')];
+        if (v !== undefined) el.textContent = v;
     });
-    function toggleMenu() {
-        document.getElementById('mobileMenu').classList.toggle('open');
-        document.getElementById('menuOverlay').classList.toggle('open');
-    }
-    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/sw.js").then(() => console.log("SW registered"));
-    }
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const v = dict[el.getAttribute('data-i18n-html')];
+        if (v !== undefined) el.innerHTML = v;
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const v = dict[el.getAttribute('data-i18n-placeholder')];
+        if (v !== undefined) el.setAttribute('placeholder', v);
+    });
+    document.querySelectorAll('.lang-btn').forEach(b => {
+        b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+    });
+    document.querySelectorAll('.community-btn.pending .soon').forEach(s => { s.textContent = dict['comm.soon'] || 'soon'; });
+    try { localStorage.setItem('lang', lang); } catch(e) {}
+    const url = new URL(window.location);
+    url.searchParams.set('lang', lang);
+    history.replaceState(null, '', url);
+}
+
+function initSocial() {
+    document.querySelectorAll('[data-social]').forEach(el => {
+        const url = SOCIAL[el.getAttribute('data-social')];
+        if (url) {
+            el.setAttribute('href', url);
+        } else if (el.classList.contains('community-btn')) {
+            el.classList.add('pending');
+            el.removeAttribute('href');
+            const badge = document.createElement('span');
+            badge.className = 'soon';
+            badge.textContent = 'скоро';
+            el.appendChild(badge);
+            el.addEventListener('click', e => e.preventDefault());
+        } else {
+            el.style.display = 'none';
+        }
+    });
+}
+
+function detectLang() {
+    const p = new URLSearchParams(window.location.search).get('lang');
+    if (p && I18N[p]) return p;
+    try { const s = localStorage.getItem('lang'); if (s && I18N[s]) return s; } catch(e) {}
+    const n = (navigator.language || 'ru').slice(0,2);
+    if (n === 'uk') return 'uk';
+    if (n === 'en') return 'en';
+    return 'ru';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initSocial();
+    applyLang(detectLang());
+    document.querySelectorAll('.lang-btn').forEach(b => {
+        b.addEventListener('click', () => applyLang(b.getAttribute('data-lang')));
+    });
+});
+
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+    if (window.scrollY > 50) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+});
+function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+    document.getElementById('menuOverlay').classList.toggle('open');
+}
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js").then(() => console.log("SW registered"));
+}
 </script>
 
 </body>
