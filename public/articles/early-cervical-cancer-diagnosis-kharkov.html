@@ -117,6 +117,7 @@
             .adsense-sidebar { display: flex; margin-bottom: 1rem; }
         }
     </style>
+    <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
     <header class="header">
@@ -258,10 +259,7 @@
                     <p><strong>«10 симптомов гинекологии, которые нельзя игнорировать»</strong> — PDF-гайд, написанный хирургом-онкологом с 40-летним стажем.</p>
                     <p style="font-size: 0.9rem; margin-top: 0.5rem;">✅ Чек-лист для самопроверки<br>✅ Когда идти к врачу срочно<br>✅ Как подготовиться к приёму</p>
 
-                    <!-- TODO: Formspree — замените YOUR_FORM_ID на реальный ID из formspree.io
-                         Получить ID: https://formspree.io/register → создать форму → скопировать ID из URL
-                    -->
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="return handleLeadMagnet(this);">
+                    <form action="https://formspree.io/f/xjgqrgrr" method="POST" onsubmit="return handleLeadMagnet(this);">
                         <input type="email" name="email" placeholder="Ваш email" required>
                         <input type="hidden" name="subject" value="Lead Magnet: 10 симптомов гинекологии">
                         <button type="submit">📥 Получить гайд бесплатно</button>
@@ -368,5 +366,6 @@
             return true;
         }
     </script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
