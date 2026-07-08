@@ -1,0 +1,64 @@
+/* ============================================================
+   MARIA Medical Center — shared site chrome (cached across pages)
+   Topbar (nav + language switch + social) + floating quick-contact.
+   Namespaced .ssv-* so it never clashes with per-page styles.
+   ============================================================ */
+:root{
+  --ssv-primary:#6B5B95; --ssv-primary-2:#4A90A4; --ssv-dark:#1A1A2E;
+  --ssv-accent:#E88D67; --ssv-white:#fff; --ssv-gray:#6C757D;
+  --ssv-grad:linear-gradient(135deg,#6B5B95 0%,#4A90A4 100%);
+  --ssv-font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+}
+body{ padding-top:56px !important; }
+
+/* ---- Topbar ---- */
+.ssv-topbar{position:fixed;top:0;left:0;right:0;height:56px;z-index:9000;
+  background:rgba(255,255,255,.88);backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(107,91,149,.12);
+  display:flex;align-items:center;gap:16px;padding:0 20px;font-family:var(--ssv-font);}
+.ssv-topbar.ssv-scrolled{background:rgba(255,255,255,.97);box-shadow:0 6px 24px rgba(0,0,0,.08);}
+.ssv-brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.ssv-brand .ssv-logo{width:34px;height:34px;border-radius:9px;background:var(--ssv-grad);
+  display:flex;align-items:center;justify-content:center;font-size:18px;color:#fff;}
+.ssv-brand b{font-size:16px;color:var(--ssv-primary);letter-spacing:.3px;}
+.ssv-brand span{font-size:10px;color:var(--ssv-gray);text-transform:uppercase;letter-spacing:.6px;display:block;line-height:1;}
+.ssv-nav{display:flex;gap:4px;margin-left:8px;}
+.ssv-nav a{padding:7px 12px;border-radius:8px;text-decoration:none;color:var(--ssv-dark);
+  font-size:13px;font-weight:600;transition:.2s;}
+.ssv-nav a:hover{color:var(--ssv-primary);background:rgba(107,91,149,.08);}
+.ssv-right{margin-left:auto;display:flex;align-items:center;gap:12px;}
+.ssv-social{display:flex;gap:6px;}
+.ssv-social a{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  text-decoration:none;font-size:14px;font-weight:700;color:#fff;transition:.2s;}
+.ssv-social a:hover{transform:translateY(-2px);filter:brightness(1.08);}
+.ssv-lang{display:flex;gap:2px;background:rgba(107,91,149,.08);padding:3px;border-radius:8px;}
+.ssv-lang button{border:0;background:transparent;color:var(--ssv-gray);font-weight:700;font-size:11px;
+  padding:5px 9px;border-radius:6px;cursor:pointer;font-family:var(--ssv-font);transition:.2s;}
+.ssv-lang button.active{background:#fff;color:var(--ssv-primary);box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.ssv-cta{background:var(--ssv-grad);color:#fff;text-decoration:none;font-size:13px;font-weight:700;
+  padding:8px 16px;border-radius:8px;white-space:nowrap;transition:.2s;box-shadow:0 2px 8px rgba(107,91,149,.25);}
+.ssv-cta:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(107,91,149,.35);}
+.ssv-burger{display:none;border:0;background:transparent;font-size:20px;cursor:pointer;color:var(--ssv-dark);}
+
+/* ---- Floating quick contact ---- */
+.ssv-fab{position:fixed;right:20px;bottom:20px;z-index:9000;display:flex;flex-direction:column;
+  align-items:flex-end;gap:10px;font-family:var(--ssv-font);}
+.ssv-fab-actions{display:flex;flex-direction:column;gap:10px;opacity:0;transform:translateY(10px) scale(.9);
+  pointer-events:none;transition:.25s;}
+.ssv-fab.open .ssv-fab-actions{opacity:1;transform:none;pointer-events:auto;}
+.ssv-fab-actions a{display:flex;align-items:center;gap:10px;background:#fff;color:var(--ssv-dark);
+  text-decoration:none;padding:10px 16px;border-radius:30px;font-size:13px;font-weight:600;
+  box-shadow:0 6px 20px rgba(0,0,0,.15);transition:.2s;}
+.ssv-fab-actions a:hover{transform:translateX(-3px);}
+.ssv-fab-actions a i{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:#fff;font-style:normal;font-size:14px;}
+.ssv-fab-toggle{width:60px;height:60px;border-radius:50%;border:0;cursor:pointer;background:var(--ssv-grad);
+  color:#fff;font-size:26px;box-shadow:0 8px 28px rgba(107,91,149,.45);transition:.25s;}
+.ssv-fab.open .ssv-fab-toggle{transform:rotate(45deg);}
+
+@media(max-width:760px){
+  .ssv-nav{display:none;}
+  .ssv-social{display:none;}
+  .ssv-topbar{gap:10px;padding:0 14px;}
+  .ssv-brand span{display:none;}
+}

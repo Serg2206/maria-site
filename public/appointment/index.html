@@ -133,6 +133,7 @@
             .main { padding-bottom: 100px; }
         }
     </style>
+    <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
@@ -243,7 +244,7 @@
 
     <div class="sidebar">
         <div class="doctor-card">
-            <img src="https://ssvnauka.com/images/doctor-portrait.jpg" alt="Профессор Сушков С.В." class="doctor-avatar" onerror="this.style.display='none'">
+            <img loading="lazy" decoding="async" src="https://ssvnauka.com/images/doctor-portrait.jpg" alt="Профессор Сушков С.В." class="doctor-avatar" onerror="this.style.display='none'">
             <div class="doctor-name">Профессор Сушков Сергей Валентинович</div>
             <div class="doctor-title">д.мед.н. · хирург-онколог · член EAES</div>
             <div class="doctor-stats">
@@ -356,5 +357,6 @@ document.getElementById('appointmentForm').addEventListener('submit', function(e
 });
 </script>
 
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
