@@ -24,11 +24,26 @@
 
   var T = {
     ru: { home:"Главная", services:"Услуги", articles:"Статьи", book:"Запись",
-          bookNow:"Записаться", quick:"Связаться", call:"Позвонить", tg:"Telegram", wa:"WhatsApp" },
+          bookNow:"Записаться", quick:"Связаться", call:"Позвонить", tg:"Telegram", wa:"WhatsApp",
+          crumbHome:"Главная", crumbArticles:"Статьи",
+          formTitle:"📅 Записаться на консультацию", fName:"Ваше имя *", fPhone:"Телефон *",
+          fEmail:"Email", fMsg:"Комментарий", fSubmit:"📞 Отправить заявку",
+          bookTg:"📱 Запись через Telegram", backHome:"← На главную", backAll:"📚 Все статьи",
+          phName:"Иван Иванов", phMsg:"Опишите симптомы или вопросы..." },
     uk: { home:"Головна", services:"Послуги", articles:"Статті", book:"Запис",
-          bookNow:"Записатися", quick:"Зв'язатися", call:"Зателефонувати", tg:"Telegram", wa:"WhatsApp" },
+          bookNow:"Записатися", quick:"Зв'язатися", call:"Зателефонувати", tg:"Telegram", wa:"WhatsApp",
+          crumbHome:"Головна", crumbArticles:"Статті",
+          formTitle:"📅 Записатися на консультацію", fName:"Ваше ім'я *", fPhone:"Телефон *",
+          fEmail:"Email", fMsg:"Коментар", fSubmit:"📞 Надіслати заявку",
+          bookTg:"📱 Запис через Telegram", backHome:"← На головну", backAll:"📚 Усі статті",
+          phName:"Іван Іванов", phMsg:"Опишіть симптоми або запитання..." },
     en: { home:"Home", services:"Services", articles:"Articles", book:"Appointment",
-          bookNow:"Book now", quick:"Contact", call:"Call", tg:"Telegram", wa:"WhatsApp" }
+          bookNow:"Book now", quick:"Contact", call:"Call", tg:"Telegram", wa:"WhatsApp",
+          crumbHome:"Home", crumbArticles:"Articles",
+          formTitle:"📅 Book a consultation", fName:"Your name *", fPhone:"Phone *",
+          fEmail:"Email", fMsg:"Comment", fSubmit:"📞 Send request",
+          bookTg:"📱 Book via Telegram", backHome:"← Home", backAll:"📚 All articles",
+          phName:"John Smith", phMsg:"Describe symptoms or questions..." }
   };
 
   var els = {};
@@ -59,9 +74,23 @@
       var v = t[el.getAttribute("data-ssv-i18n")];
       if (v) el.textContent = v;
     });
+    document.querySelectorAll("[data-ssv-i18n-ph]").forEach(function (el) {
+      var v = t[el.getAttribute("data-ssv-i18n-ph")];
+      if (v) el.setAttribute("placeholder", v);
+    });
     els.langBtns && els.langBtns.forEach(function (b) {
       b.classList.toggle("active", b.getAttribute("data-lang") === lang);
     });
+    // per-page translated article bodies: show only the active language block
+    var blocks = document.querySelectorAll("[data-lang-content]");
+    if (blocks.length) {
+      var hasLang = false;
+      blocks.forEach(function (el) { if (el.getAttribute("data-lang-content") === lang) hasLang = true; });
+      var shown = hasLang ? lang : "ru";
+      blocks.forEach(function (el) {
+        el.style.display = el.getAttribute("data-lang-content") === shown ? "" : "none";
+      });
+    }
     try { localStorage.setItem("lang", lang); } catch (e) {}
     var u = new URL(location); u.searchParams.set("lang", lang);
     history.replaceState(null, "", u);
