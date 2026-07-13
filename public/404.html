@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена | Медицинский Центр MARIA</title>
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#6B5B95">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:"Segoe UI",Arial,sans-serif;line-height:1.6;color:#333;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#6B5B95 0%,#9c88c4 100%);padding:2rem;text-align:center}
+        .card{background:#fff;border-radius:16px;padding:3rem 2.5rem;max-width:520px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+        .emoji{font-size:4rem;margin-bottom:1rem}
+        h1{font-size:1.6rem;color:#6B5B95;margin-bottom:.75rem}
+        p{color:#555;margin-bottom:.5rem}
+        .btns{margin-top:1.5rem}
+        .btn{display:inline-block;padding:.9rem 1.8rem;background:#6B5B95;color:#fff;text-decoration:none;border-radius:8px;margin:.4rem;font-size:1rem;transition:transform .2s}
+        .btn:hover{transform:translateY(-2px)}
+        .btn.alt{background:#28a745}
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="emoji">🩺</div>
+        <div data-lang-content="ru">
+            <h1>Страница не найдена</h1>
+            <p>Такой страницы на сайте нет — возможно, в адресе опечатка или страница была перемещена.</p>
+        </div>
+        <div data-lang-content="uk" style="display:none">
+            <h1>Сторінку не знайдено</h1>
+            <p>Такої сторінки на сайті немає — можливо, в адресі помилка або сторінку було переміщено.</p>
+        </div>
+        <div data-lang-content="en" style="display:none">
+            <h1>Page not found</h1>
+            <p>This page does not exist — the address may contain a typo, or the page has been moved.</p>
+        </div>
+        <div class="btns">
+            <a href="/" class="btn" data-ssv-i18n="crumbHome">Главная</a>
+            <a href="/articles/" class="btn" data-ssv-i18n="crumbArticles">Статьи</a>
+            <a href="/appointment/" class="btn alt">📅 +380 67 570 79 49</a>
+        </div>
+    </div>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
