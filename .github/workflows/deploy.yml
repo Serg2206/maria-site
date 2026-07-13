@@ -24,6 +24,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
+      - name: Minify HTML/CSS/JS
+        run: |
+          npx --yes esbuild public/assets/site.css public/assets/fonts.css public/assets/site.js --minify --outdir=public/assets --allow-overwrite
+          npx --yes html-minifier-terser --input-dir public --output-dir public --file-ext html \
+            --collapse-whitespace --remove-comments --minify-css true --minify-js true --continue-on-parse-error
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
       
