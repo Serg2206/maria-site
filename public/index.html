@@ -39,6 +39,7 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#6B5B95">
     <link rel="apple-touch-icon" href="/icon-192.png">
+    <link rel="preload" as="image" href="/images/doctor-portrait.webp" fetchpriority="high">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -398,7 +399,7 @@
             </div>
         </div>
         <div class="hero-image-wrap">
-            <img src="/images/doctor-portrait.jpg" alt="Профессор Сушков С.В. — хирург-онколог, доктор медицинских наук" class="hero-image" onerror="this.style.display='none'">
+            <img src="/images/doctor-portrait.webp" width="800" height="800" fetchpriority="high" decoding="async" alt="Профессор Сушков С.В. — хирург-онколог, доктор медицинских наук" class="hero-image" onerror="this.style.display='none'">
             <div class="hero-image-badge">
                 <div class="hero-image-badge-icon">👨‍⚕️</div>
                 <div>
@@ -489,7 +490,7 @@
 <section class="about" id="about">
     <div class="about-inner">
         <div>
-            <img src="/images/doctor-portrait.jpg" alt="Профессор Сушков Сергей Валентинович — хирург-онколог" class="about-portrait" onerror="this.style.display='none'">
+            <img src="/images/doctor-portrait.webp" width="800" height="800" loading="lazy" decoding="async" alt="Профессор Сушков Сергей Валентинович — хирург-онколог" class="about-portrait" onerror="this.style.display='none'">
         </div>
         <div class="about-content">
             <span class="about-label" data-i18n="nav.about">О центре</span>
