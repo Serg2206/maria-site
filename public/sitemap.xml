@@ -108,24 +108,4 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Добавленные статьи -->
-  <url>
-    <loc>https://ssvnauka.com/articles/gynecology-checkup-kharkov.html</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ssvnauka.com/articles/mammography-kharkov.html</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://ssvnauka.com/articles/surgery-consultation-kharkov.html</loc>
-    <lastmod>2026-07-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
 </urlset>
